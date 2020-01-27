@@ -1,0 +1,35 @@
+<<<<<<<<<<<<how to use MD>>>>>>>>
+Think of each person's skills and what you'd like to learn to pick a platform and framework to learn and use this semester.
+-	Our skills comprise of UX/UI experience as well as Testing experience. we are familiar with databases.
+-	We will use AngularJS and MONGO for the database
+-	We have a bit of freedom and we look a references and aesthetic with the constraint on what specifics she will want.
+Make a new list of requirements
+-	Reference to other websites 
+o	Website needed (separate website because we need permission to extend it to the school)
+o	Checkboxes
+o	Statistics on who joined the pledge
+o	Questionnaire (FR)
+o	Registering User (Name, Email [for updates], phone number, school)
+o	Database 
+o	User share pictures and their experiences (NFR)
+o	 User friendly (NFR)
+o	Aesthetic
+o	Non-Gender specific (NFR) (when asking questions. Don’t add gender)
+Requirement list should include:
+•	Priority
+-	Making the website with the Questionnaire 1st 
+-	Database 2nd
+-	Registrar 3rd   
+-	Design 4th
+
+•	Justification
+-	For our client, they want the questionnaire and database first to have students and people alike, and also get data for the questions.
+-	The registrar and the design are the last few things we need to prioritize because what ned to be done first
+
+•	separation of functional, non-functional, and domain requirements
+o	Questionnaire (FR)
+o	User share pictures and their experiences (NFR)
+o	User friendly (NFR)
+o	MONGO(DR)
+o	Angular(DR)
+o	NodeJS 
