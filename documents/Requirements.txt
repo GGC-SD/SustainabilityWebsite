@@ -22,7 +22,8 @@ Requirement list should include:
 -	Design 4th
 
 •	Justification
--	For our client, they want the questionnaire and database first to have students and people alike, and also get data for the questions.
+-	For our client, they want the questionnaire and database first to have students and people alike, and also get data for the 
+  questions.
 -	The registrar and the design are the last few things we need to prioritize because what ned to be done first
 
 •	separation of functional, non-functional, and domain requirements
