@@ -33,3 +33,5 @@ o	User friendly (NFR)
 o	MONGO(DR)
 o	Angular(DR)
 o	NodeJS 
+o	Scalability: bootstrap (NFR)
+
