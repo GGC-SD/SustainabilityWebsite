@@ -2,4 +2,6 @@
 
 ## Team Avengers
 ### Team Roles  
-1. _Chris Martinez_**.
+..* _Chris Martinez_
+1. **UI/UX design** :crossed_swords:
+2. **Client Laison** :tokyo_tower:
