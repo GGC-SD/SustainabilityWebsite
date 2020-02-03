@@ -13,6 +13,13 @@
 1. _Data Modeler_ :surfer:
 2. _Documentation Lead and Testing Lead_ :bookmark_tabs: :squirrel:
 
+**Denzel Gomez**
+1. _Code architecture/lead programmer :hammer:
+  - (In charge of framework, components, coding style, and programming)
+  
+2. _Team manager_ :santa: :gift:
+  - (Sprint planning, and time accounting for the team)
+
 * **Repo Location**
   - [**click here**](https://github.com/GGC-SD/SustainabilityWebsite)
 
