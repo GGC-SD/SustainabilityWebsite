@@ -14,7 +14,7 @@
 2. _Documentation Lead and Testing Lead_ :bookmark_tabs: :squirrel:
 
 **Denzel Gomez**
-1. _Code architecture/lead programmer :hammer:
+1. _Code architecture/lead programmer_ :hammer:
   - (In charge of framework, components, coding style, and programming)
   
 2. _Team manager_ :santa: :gift:
