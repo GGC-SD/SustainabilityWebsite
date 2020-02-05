@@ -19,7 +19,7 @@
   - [**click here**](https://github.com/GGC-SD/SustainabilityWebsite)
 
 * **Progress Tracking Tools**
-  - TBA
+  - Jira
 
 * **Communication Tools**
   - Discord
