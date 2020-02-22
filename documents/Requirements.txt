@@ -8,7 +8,7 @@ o	Website needed (separate website because we need permission to extend it to th
 o	Checkboxes
 o	Statistics on who joined the pledge
 o	Side Nav has to be a Navigation bar going horizontally on the screen
-o	Needs a page with what the user picked for yhe pledge
+o	Needs a page with what the user picked for the pledge
 o	Button with link to their donations page
 o	Big button for signing up
 o	Questionnaire (FR)
