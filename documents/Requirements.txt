@@ -7,11 +7,15 @@ Make a new list of requirements
 o	Website needed (separate website because we need permission to extend it to the school)
 o	Checkboxes
 o	Statistics on who joined the pledge
+o	Side Nav has to be a Navigation bar going horizontally on the screen
+o	Needs a page with what the user picked for yhe pledge
+o	Button with link to their donations page
+o	Big button for signing up
 o	Questionnaire (FR)
 o	Registering User (Name, Email [for updates], phone number, school)
 o	Database 
 o	User share pictures and their experiences (NFR)
-o	 User friendly (NFR)
+o	User friendly (NFR)
 o	Aesthetic
 o	Non-Gender specific (NFR) (when asking questions. Don’t add gender)
 Requirement list should include:
@@ -19,12 +23,13 @@ Requirement list should include:
 -	Making the website with the Questionnaire 1st 
 -	Database 2nd
 -	Registrar 3rd   
--	Design 4th
+- Page with users chosen pladges at the end of page 4th
+-	Design 5th
 
 •	Justification
--	For our client, they want the questionnaire and database first to have students and people alike, and also get data for the 
-  questions.
--	The registrar and the design are the last few things we need to prioritize because what ned to be done first
+-	For our client, they want the questionnaire and database first to have students and people alike, and also get data for the questions.
+-	The registrar and the design are the last few things we need to prioritize because what need to be done first
+- If we have time they want us to make the function of having the automatic email to the users that have completed the pledge but they told us that if it was not met because of time, they would pass it to the next group after us.
 
 •	separation of functional, non-functional, and domain requirements
 o	Questionnaire (FR)
