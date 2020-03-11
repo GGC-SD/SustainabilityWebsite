@@ -13,7 +13,7 @@ o	Button with link to their donations page
 o	Big button for signing up
 o	Questionnaire (FR)
 o	Registering User (Name, Email [for updates], phone number, school)
-o	Database 
+o	Database (Firebase) (FR)
 o	User share pictures and their experiences (NFR)
 o	User friendly (NFR)
 o	Aesthetic
