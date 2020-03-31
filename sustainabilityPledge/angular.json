@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "sustainabilityPledge": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sustainabilityPledge"
+    }
+  },
+  "defaultProject": "sustainabilityPledge",
+  "cli": {
+    "analytics": "63c88502-05b2-47bd-bc8f-d61e1826854f"
+  }
 }

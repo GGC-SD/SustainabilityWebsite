@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-electricity',
   templateUrl: './electricity.component.html',
@@ -11,5 +13,7 @@ export class ElectricityComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
 
 }
