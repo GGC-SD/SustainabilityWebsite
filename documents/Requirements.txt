@@ -1,12 +1,11 @@
 Think of each person's skills and what you'd like to learn to pick a platform and framework to learn and use this semester.
 -	Our skills comprise of UX/UI experience as well as Testing experience. we are familiar with databases.
--	We will use AngularJS and MONGO for the database
+-	We will use AngularJS and Firebase for the database
 -	We have a bit of freedom and we look a references and aesthetic with the constraint on what specifics she will want.
 Make a new list of requirements
 -	Reference to other websites 
 o	Website needed (separate website because we need permission to extend it to the school)
 o	Checkboxes
-o	Statistics on who joined the pledge
 o	Side Nav has to be a Navigation bar going horizontally on the screen
 o	Needs a page with what the user picked for the pledge
 o	Button with link to their donations page
@@ -35,8 +34,7 @@ Requirement list should include:
 o	Questionnaire (FR)
 o	User share pictures and their experiences (NFR)
 o	User friendly (NFR)
-o	MONGO(DR)
+o	Firebase(DR)
 o	Angular(DR)
-o	NodeJS 
 o	Scalability: bootstrap (NFR)
 
