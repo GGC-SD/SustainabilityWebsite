@@ -1,0 +1,46 @@
+<div class="container-fluid" style="background-color: #00704A; text-align: center; height: 127px; color: white; font-size: 60px;">
+  Food
+  </div>
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+      <a class="nav-link" routerLink="/water" > Water</a>
+      <a class="nav-link" routerLink="/electricity" > Electricity</a>
+      <a class="nav-link" routerLink="/food" >Food</a>
+      <a class="nav-link" routerLink="/recycling" > Recycling</a>
+      <a class="nav-link" routerLink="/transportation" > Transportation</a>
+      <a class="nav-link" routerLink="/" > Home</a>
+      <a class="nav-link" routerLink="/choose-username" > Logout</a>
+    </div>
+  </nav>
+
+  <form>
+    <h3>Bulk Shops</h3>
+    <p>Instead of buying packaged goods, I will go to a bulk store and use tupperware</p>
+    <input type="radio" id="fYes" name="bulk" value="fYes">
+    <label for="fYes">Pledge</label>
+    <br>
+    <input type="radio" id="fNo" name="bulk" value="fNo">
+    <label for="fNo">Do Not Pledge</label>
+    <br>
+    <input type="radio" id="fDo" name="bulk" value="fDo">
+    <label for="fDo">Already Pledged</label>
+    <br>
+
+    <h3>Eat less Meat</h3>
+    <p>I will eat less meat to help the environment</p>
+    <input type="radio" id="fYes2" name="lessMeat" value="fYes2">
+    <label for="fYes2">Pledge</label>
+    <br>
+    <input type="radio" id="fNo2" name="lessMeat" value="fNo2">
+    <label for="fNo2">Do not Pledge</label>
+    <br>
+    <input type="radio" id="fDo2" name="lessMeat" value="fDo2">
+    <label for="fDo2">Already Pledge</label>
+    <br><br>
+  </form>
+
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-secondary" routerLink="/electricity">Back</button>
+    <button type="button" class="btn btn-secondary" routerLink="/recycling">Next</button>
+  </div>
