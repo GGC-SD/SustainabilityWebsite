@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionService } from "../question.service";
 
 @Component({
   selector: 'app-water',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WaterComponent implements OnInit {
 
-  constructor() { }
+  numberOfQuestions: number = 2;
+  waterQuestions: any;
+
+  constructor(
+    private questionService: QuestionService
+  ) { }
 
   ngOnInit(): void {
+    this.waterQuestions = this.questionService.getWater();
   }
 
+  radioChangeHandler(event: any){
+    let i = 1;
+    while(i != this.numberOfQuestions+1){
+      if(i == event.target.id){
+        this.questionService.setAnswers(event.target.name, event.target.value);
+        break;
+      }else{
+        i++;
+      }
+    }
+  } 
+  
 }

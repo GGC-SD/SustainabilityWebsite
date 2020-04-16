@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { SignupComponent } from './signup/signup.component';
 import { WaterComponent } from './water/water.component';
 import { ElectricityComponent } from './electricity/electricity.component';
 import { FoodComponent } from './food/food.component';
@@ -25,6 +25,8 @@ import { AuthenticationService } from './shared/authentication.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ChooseUsernameComponent } from './/choose-username/choose-username.component';
+import { ResultComponent } from './result/result.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 //
 
@@ -33,30 +35,24 @@ import { ChooseUsernameComponent } from './/choose-username/choose-username.comp
   declarations: [
     AppComponent,
     HomeComponent,
-
-
-    SignupComponent,
     WaterComponent,
     ElectricityComponent,
     FoodComponent,
-
     TransportationComponent,
     RecyclingComponent,
     LoginComponent,
     ChooseUsernameComponent,
-
+    ResultComponent,
+    TopBarComponent
   ],
   imports: [
-
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    FormsModule
-
-
-
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [AuthenticationService],
   bootstrap: [AppComponent]

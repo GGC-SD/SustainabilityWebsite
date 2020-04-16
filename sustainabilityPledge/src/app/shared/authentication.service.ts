@@ -21,6 +21,7 @@ this.angularFireAuth
 .createUserWithEmailAndPassword(email, password)
 .then(res => {
 console.log('You are Successfully signed up!', res);
+this.router.navigate(['/home']);
 })
 .catch(error => {
 console.log('Something is wrong:', error.message);

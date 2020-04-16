@@ -1,46 +1,17 @@
+<app-top-bar></app-top-bar>
 
-<div class="container-fluid" style="background-color: #00704A; text-align: center; height: 127px; color: white; font-size: 60px;">
- Electricity
- </div>
-
- <nav class="navbar navbar-expand navbar-dark bg-dark">
-   <div class="navbar-nav">
-     <a class="nav-link" routerLink="/water" > Water</a>
-     <a class="nav-link" routerLink="/electricity" > Electricity</a>
-     <a class="nav-link" routerLink="/food" >Food</a>
-     <a class="nav-link" routerLink="/recycling" > Recycling</a>
-     <a class="nav-link" routerLink="/transportation" > Transportation</a>
-     <a class="nav-link" routerLink="/" > Home</a>
-     <a class="nav-link" routerLink="/choose-username" > Logout</a>
-   </div>
- </nav>
-
- <form>
-   <h3>Computer Sleep Mode</h3>
-   <p>I will put my computer on sleep mode when I am not using it to save battery</p>
-   <input type="radio" id="eYes" name="sleepMode" value="eYes">
-
-
-   <label for="eYes">Pledge</label>
-   <br>
-   <input type="radio" id="eNo" name="sleepMode" value="eNo">
-   <label for="eNo">Do Not Pledge</label>
-   <br>
-   <input type="radio" id="eDo" name="sleepMode" value="eDo">
-   <label for="eDo">Already Pledged</label>
-   <br>
-   <h3>Unplug Outlets</h3>
-   <p>I will unplug outlet when they are not in use to conserve energy</p>
-   <input type="radio" id="eYes2" name="uOutlet" value="eYes2">
-   <label for="eYes2">Pledge</label>
-   <br>
-   <input type="radio" id="eNo2" name="uOutlet" value="eNo2">
-   <label for="eNo2">Do not Pledge</label>
-   <br>
-   <input type="radio" id="eDo2" name="uOutlet" value="eDo2">
-   <label for="eDo2">Already Pledge</label>
-   <br><br>
- </form>
+ <div *ngFor="let question of electricityQuestion | async">
+  <h3> {{question.title}} </h3>
+  <p>{{question.question}}</p>
+  <input type="radio" id="{{question.id}}" value="{{question.yesOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+  <label>{{question.yesOption}}</label>
+  <br>
+  <input type="radio" id="{{question.id}}" value="{{question.noOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+  <label>{{question.noOption}}</label>
+  <br>
+  <input type="radio" id="{{question.id}}" value="{{question.doOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+  <label>{{question.doOption}}</label>
+</div>
 
  <div class="btn-group" role="group">
   <button type="button" class="btn btn-secondary" routerLink="/water">Back</button>
