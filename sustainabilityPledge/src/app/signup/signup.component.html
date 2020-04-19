@@ -1,20 +1,13 @@
-<<<<<<< HEAD
 
 <div class="container-fluid" style="background-color: #00704A; text-align: center; height: 123px;">
   <h1 style="color: white; font-size: 50px;">
    Sign Up</h1>
 </div>
-=======
- <div class="container-fliud" style="background-color: #00704A; text-align: center; height: 123px;">
-  <h1 style="color: white; font-size:50px;">Sign Up</h1>
- </div>
->>>>>>> eb2487d59369808879d3d6134cb2ed78b8e821a8
 
 
 <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
 
-<<<<<<< HEAD
 
     <div class="form-group">
       <label>Username</label>
@@ -22,11 +15,6 @@
       placeholder="Awesome Username Here.."
       required [(ngModel)]="user" name="username"  #username ngModel>
 
-=======
-    <div class="form-group">
-      <label>Username</label>
-      <input type="text" class="form-control" id="username" name="username">
->>>>>>> eb2487d59369808879d3d6134cb2ed78b8e821a8
     </div>
 
     <label>First Name</label>
@@ -45,20 +33,15 @@
 
   <div class="form-group">
     <label>Email address</label>
-<<<<<<< HEAD
     <input type="email" class="form-control" id="email" name="email" 
     placeholder="School email is preferred"
     required [(ngModel)]="email" [pattern]="emailPattern">
 
-=======
-    <input type="email" class="form-control" id="email1" name="email1">
->>>>>>> eb2487d59369808879d3d6134cb2ed78b8e821a8
   </div>
 
 
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-<<<<<<< HEAD
     <input type="password" class="form-control" id="exampleInputPassword"
     placeholder="**"
     required [(ngModel)]="password" name="exampleInputPassword1" #exampleInputPassword ngModel>
@@ -68,14 +51,4 @@
 
 
   <button type="submit"  class="btn btn-secondary"   >Submit</button>
-=======
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-
-<!-- I added the button to a div and added a login button to send the user to the login page -->
-  <div class="form-group">
-  <button type="submit" class="btn btn-secondary">Submit</button>
-  <a routerLink="/login" class="btn btn-link" style="color: #00704A;">Login</a>
-</div>
->>>>>>> eb2487d59369808879d3d6134cb2ed78b8e821a8
 </form>

@@ -5,16 +5,10 @@ import { FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-<<<<<<< HEAD
-
-=======
-import { LoginComponent } from './login/login.component';
->>>>>>> eb2487d59369808879d3d6134cb2ed78b8e821a8
 import { SignupComponent } from './signup/signup.component';
 import { WaterComponent } from './water/water.component';
 import { ElectricityComponent } from './electricity/electricity.component';
 import { FoodComponent } from './food/food.component';
-<<<<<<< HEAD
 
 import { TransportationComponent } from './transportation/transportation.component';
 import { RecyclingComponent } from './recycling/recycling.component';
@@ -31,30 +25,21 @@ import { AuthenticationService } from './shared/authentication.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ChooseUsernameComponent } from './/choose-username/choose-username.component';
+import { AuthGuard } from './auth.guard';
 
 //
-=======
-import { RecyclingComponent } from './recycling/recycling.component';
-import { TransportationComponent } from './transportation/transportation.component';
-
->>>>>>> eb2487d59369808879d3d6134cb2ed78b8e821a8
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-<<<<<<< HEAD
 
 
-=======
-    LoginComponent,
->>>>>>> eb2487d59369808879d3d6134cb2ed78b8e821a8
     SignupComponent,
     WaterComponent,
     ElectricityComponent,
     FoodComponent,
-<<<<<<< HEAD
 
     TransportationComponent,
     RecyclingComponent,
@@ -63,10 +48,6 @@ import { TransportationComponent } from './transportation/transportation.compone
   
   
 
-=======
-    RecyclingComponent,
-    TransportationComponent
->>>>>>> eb2487d59369808879d3d6134cb2ed78b8e821a8
   ],
   imports: [
     
@@ -80,7 +61,7 @@ import { TransportationComponent } from './transportation/transportation.compone
 
 
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
