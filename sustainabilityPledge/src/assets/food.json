@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "category": "food",
         "title": "Bulk Shops",
         "question": "Instead of buying packaged goods I will go to a bulk store and use tupperware",
         "yesOption": "Pledge",
@@ -8,7 +8,7 @@
         "doOption": "Already Pledged"
     },
     {
-        "id": "2",
+        "category": "food",
         "title": "Eat less Meat",
         "question": "I will eat less meat to help the environment",
         "yesOption": "Pledge",

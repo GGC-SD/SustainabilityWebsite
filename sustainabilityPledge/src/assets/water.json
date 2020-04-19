@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "category": "water",
         "title": "Water Flask",
         "question": "I will use a water Flask instead of a water Bottle",
         "yesOption": "Pledge",
@@ -8,7 +8,7 @@
         "doOption": "Already Pledged"
     },
     {
-        "id": "2",
+        "category": "water",
         "title": "Turn Off Fauset",
         "question": "I will turn off the water fauset while I am brushing my teeth or showering",
         "yesOption": "Pledge",

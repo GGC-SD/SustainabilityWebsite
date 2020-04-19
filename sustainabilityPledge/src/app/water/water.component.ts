@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from "../question.service";
+import { Pledge } from "../models/Pledge";
 
 @Component({
   selector: 'app-water',
@@ -8,7 +9,6 @@ import { QuestionService } from "../question.service";
 })
 export class WaterComponent implements OnInit {
 
-  numberOfQuestions: number = 2;
   waterQuestions: any;
 
   constructor(
@@ -20,15 +20,17 @@ export class WaterComponent implements OnInit {
   }
 
   radioChangeHandler(event: any){
-    let i = 1;
-    while(i != this.numberOfQuestions+1){
-      if(i == event.target.id){
-        this.questionService.setAnswers(event.target.name, event.target.value);
-        break;
-      }else{
-        i++;
+    let obj = new Pledge(event.target.id, event.target.name, event.target.value);
+    let checker = false;
+    for(let answer of Object.keys(this.questionService.answers)){
+      var a = this.questionService.answers[answer];
+      if(a.question == obj.question){
+        checker = true;
       }
     }
-  } 
-  
+    if(checker == false){
+      this.questionService.addToAnswers(obj);
+    }
+    console.log(this.questionService.progress);     
+  }
 }

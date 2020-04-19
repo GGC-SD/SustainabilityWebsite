@@ -3,13 +3,13 @@
   <div *ngFor="let question of recyclingQuestion | async">
     <h3> {{question.title}} </h3>
     <p>{{question.question}}</p>
-    <input type="radio" id="{{question.id}}" value="{{question.yesOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+    <input type="radio" id="{{question.category}}" value="{{question.yesOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
     <label>{{question.yesOption}}</label>
     <br>
-    <input type="radio" id="{{question.id}}" value="{{question.noOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+    <input type="radio" id="{{question.category}}" value="{{question.noOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
     <label>{{question.noOption}}</label>
     <br>
-    <input type="radio" id="{{question.id}}" value="{{question.doOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+    <input type="radio" id="{{question.category}}" value="{{question.doOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
     <label>{{question.doOption}}</label>
   </div>
 

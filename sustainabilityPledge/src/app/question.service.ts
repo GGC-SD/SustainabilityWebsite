@@ -1,33 +1,57 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { TSMap } from "typescript-map";
+
+import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Pledge } from './models/Pledge';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionService {
   progress: number = 0;
-  answers = new TSMap<String,String>();
+  answers: Pledge[] = [];
+  data: Observable<any[]>;
+  totalQuestions: number = 10; //REPLACE WITH NEW TOTAL IF ADDED QUESTIONS TO JSON
 
   constructor(
-    private http: HttpClient
-  ) { }
+    private http: HttpClient,
+    private router: Router,
+    public db: AngularFireDatabase
+  ) {
+    this.data = this.db.list('Pledges').valueChanges();
+   }
 
-  toJSON(){
-    return this.answers.toJSON();
-  }
+  //  addTotalQuestions(n:number){
+  //   this.totalQuestions += n;
+  //  }
 
-  setAnswers(q:String, a:String){
-    this.answers.set(q,a);
-    this.progress = this.answers.size();
-  }
+   getData(){
+     return this.data;
+   }
 
-  getAnswers(){
-    return this.answers;
-  }
+   addToAnswers(obj: Pledge){
+    this.answers.push(obj);
+    this.progress++;
+   }
 
-  getProgress(){
-    return this.progress;
+  onSubmit(){
+    if(this.progress != this.totalQuestions){ 
+      window.alert('Answer all of the questions before submitting!');
+      return;
+    }else{
+      this.db.list('Pledges').push({
+        pledge: this.answers
+      })
+      .then(function(docRef) {
+        console.log(docRef);
+       })
+      .catch(function(error) {
+        console.error("Error adding document: ", error);
+      });
+      this.router.navigate(['/result']);
+    }   
   }
 
   getWater(){

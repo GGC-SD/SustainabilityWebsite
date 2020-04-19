@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "category": "recycling",
         "title": "Throw Water Bottles in Recycle Bin",
         "question": "I will not throw away water bottles in trash cans I will recycle",
         "yesOption": "Pledge",
@@ -8,7 +8,7 @@
         "doOption": "Already Pledged"
     },
     {
-        "id": "2",
+        "category": "recycling",
         "title": "Hand-Me-Down/Thrift",
         "question": "I will use handmedownsthrift instead of buying",
         "yesOption": "Pledge",

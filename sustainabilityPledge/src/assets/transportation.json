@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "category": "transportation",
         "title": "Car Pulling",
         "question": "I will share rides or give rides to have less cars on the roads",
         "yesOption": "Pledge",
@@ -8,7 +8,7 @@
         "doOption": "Already Pledged"
     },
     {
-        "id": "2",
+        "category": "transportation",
         "title": "Turn off Vehicle when not in use",
         "question": "I will turn off my car when I am physically not driving it",
         "yesOption": "Pledge",

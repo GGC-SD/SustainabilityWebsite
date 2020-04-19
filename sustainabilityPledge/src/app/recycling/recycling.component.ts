@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuestionService } from "../question.service";
+import { Pledge } from "../models/Pledge";
 
 @Component({
   selector: 'app-recycling',
@@ -9,7 +10,6 @@ import { QuestionService } from "../question.service";
 export class RecyclingComponent implements OnInit {
 
   recyclingQuestion: any;
-  numberOfQuestions: number = 2;
 
   constructor(
     private questionService: QuestionService
@@ -20,14 +20,17 @@ export class RecyclingComponent implements OnInit {
   }
 
   radioChangeHandler(event: any){
-    let i = 1;
-    while(i != this.numberOfQuestions+1){
-      if(i == event.target.id){
-        this.questionService.setAnswers(event.target.name, event.target.value);
-        break;
-      }else{
-        i++;
+    let obj = new Pledge(event.target.id, event.target.name, event.target.value);
+    let checker = false;
+    for(let answer of Object.keys(this.questionService.answers)){
+      var a = this.questionService.answers[answer];
+      if(a.question == obj.question){
+        checker = true;
       }
     }
-  } 
+    if(checker == false){
+      this.questionService.addToAnswers(obj);
+    }
+    console.log(this.questionService.progress);     
+  }  
 }

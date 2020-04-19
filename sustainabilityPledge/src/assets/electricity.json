@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "category": "electricity",
         "title": "Computer Sleep Mode",
         "question": "I will put my computer on sleep mode when I am not using it to save battery",
         "yesOption": "Pledge",
@@ -8,7 +8,7 @@
         "doOption": "Already Pledged"
     },
     {
-        "id": "2",
+        "category": "electricity",
         "title": "Unplug Outlets",
         "question": "I will unplug outlet when they are not in use to conserve energy",
         "yesOption": "Pledge",
