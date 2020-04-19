@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestionService } from "../question.service";
-import { Result } from "../models/Result";
+import { QuestionService } from '../question.service';
+import { Result } from '../models/Result';
 import { Pledge } from '../models/Pledge';
 
 @Component({
@@ -13,7 +13,7 @@ export class ResultComponent implements OnInit {
   data: Pledge[] = [];
   answers: Pledge[];
   resultCount: Map<string, Result> = new Map<string, Result>();
-  
+
 
   constructor(
     private questionService: QuestionService
@@ -45,16 +45,15 @@ export class ResultComponent implements OnInit {
 
   getResults(){
     for(let d of Object.keys(this.data)){
-      var p = this.data[d];
+      let p = this.data[d];
       for(let r of Object.keys(p)){
-        var a = p[r]; //arrays after pledge
+        let a = p[r]; //arrays after pledge
         for(let b of Object.keys(a)){
-          var c = a[b]; // get attributes
+          let c = a[b]; // get attributes
             this.counter(c.question, c.answer);
         }
       }
-    }  
+    }
   }
 
 }
- 

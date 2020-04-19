@@ -18,7 +18,7 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {environment} from '../environments/environment';
 
-import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 /* Auth service */
 import { AuthenticationService } from './shared/authentication.service';
@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { ChooseUsernameComponent } from './/choose-username/choose-username.component';
 import { ResultComponent } from './result/result.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { AuthGuard } from './auth.guard';
 
 //
 
@@ -54,7 +55,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [AuthenticationService],
+  providers: [AuthenticationService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

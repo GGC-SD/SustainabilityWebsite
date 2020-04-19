@@ -11,20 +11,34 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChooseUsernameComponent } from './choose-username/choose-username.component';
 import { ResultComponent } from './result/result.component';
+import { AuthGuard } from './auth.guard';
+
 
 
 const routes: Routes = [
 
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'loginn',component: LoginComponent},
-  {path: 'water', component: WaterComponent},
-  {path: 'electricity', component: ElectricityComponent},
-  {path: 'food', component: FoodComponent},
-  {path: 'recycling', component: RecyclingComponent},
-  {path: 'transportation', component: TransportationComponent},
-  {path: 'login',component: ChooseUsernameComponent},
-  {path: 'result', component: ResultComponent}
+  {path: 'home', component: HomeComponent,
+  canActivate: [AuthGuard]
+ },
+
+  {path: 'team',component: LoginComponent},
+
+  {path: 'water', component: WaterComponent,
+  canActivate: [AuthGuard]},
+  {path: 'electricity', component: ElectricityComponent,
+  canActivate: [AuthGuard]},
+  {path: 'food', component: FoodComponent,
+  canActivate: [AuthGuard]},
+  {path: 'recycling', component: RecyclingComponent,
+  canActivate: [AuthGuard]},
+
+  {path: 'transportation', component: TransportationComponent,
+  canActivate: [AuthGuard]},
+  {path: 'login',component: ChooseUsernameComponent
+},
+{path: 'result', component: ResultComponent,
+canActivate: [AuthGuard]}
 
 ];
 
