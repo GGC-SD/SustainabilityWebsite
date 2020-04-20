@@ -14,5 +14,37 @@
         "yesOption": "Pledge",
         "noOption": "Do not Pledge",
         "doOption": "Already Pledged"
-    }
+    },
+    {
+      "category": "food",
+      "title": "Local Products",
+      "question": "I will buy locally grown produce to leave less of a carbon footprint",
+      "yesOption": "Pledge",
+      "noOption": "Do not Pledge",
+      "doOption": "Already Pledged"
+  },
+  {
+    "category": "food",
+    "title": "Organic Labeled",
+    "question": "I will Look for organic labels on food ",
+    "yesOption": "Pledge",
+    "noOption": "Do not Pledge",
+    "doOption": "Already Pledged"
+},
+{
+  "category": "food",
+  "title": "Fair Trade",
+  "question": "I will but from Fair Trade whenever possible",
+  "yesOption": "Pledge",
+  "noOption": "Do not Pledge",
+  "doOption": "Already Pledged"
+},
+{
+  "category": "food",
+  "title": "Seasonal Food",
+  "question": "I will buy seasonal food ",
+  "yesOption": "Pledge",
+  "noOption": "Do not Pledge",
+  "doOption": "Already Pledged"
+}
 ]

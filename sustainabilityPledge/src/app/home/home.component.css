@@ -9,3 +9,11 @@
   font-size: 50px;
   background-color: #00704A;
 }
+#rotate {
+  transform: rotate(90deg);
+  }
+
+.size {
+  width: 300px;
+  height: 300px;
+}

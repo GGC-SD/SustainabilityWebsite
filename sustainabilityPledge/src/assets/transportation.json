@@ -14,5 +14,21 @@
         "yesOption": "Pledge",
         "noOption": "Do not Pledge",
         "doOption": "Already Pledged"
-    }
+    },
+    {
+      "category": "transportation",
+      "title": "Riding Bikes or Walking",
+      "question": "I will ride bikes or walk to go to close by stores, parks, and friends’ places than using a car",
+      "yesOption": "Pledge",
+      "noOption": "Do not Pledge",
+      "doOption": "Already Pledged"
+  },
+  {
+    "category": "transportation",
+    "title": "Inner City Travel",
+    "question": "I will use the inner-city railways and subway to travel around a city or cross country",
+    "yesOption": "Pledge",
+    "noOption": "Do not Pledge",
+    "doOption": "Already Pledged"
+}
 ]
