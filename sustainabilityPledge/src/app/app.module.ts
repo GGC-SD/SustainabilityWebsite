@@ -28,6 +28,7 @@ import { ChooseUsernameComponent } from './/choose-username/choose-username.comp
 import { ResultComponent } from './result/result.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { AuthGuard } from './auth.guard';
+import { FaqComponent } from './faq/faq.component';
 
 //
 
@@ -44,7 +45,8 @@ import { AuthGuard } from './auth.guard';
     LoginComponent,
     ChooseUsernameComponent,
     ResultComponent,
-    TopBarComponent
+    TopBarComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
