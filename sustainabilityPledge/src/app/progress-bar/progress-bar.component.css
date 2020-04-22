@@ -1,0 +1,14 @@
+.div{
+    display: block;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.pbar{
+    position: center;
+    width: 100%;
+    color: #228545;
+    background-color: white;
+    border-color: #228545;
+}

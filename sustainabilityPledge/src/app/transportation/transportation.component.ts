@@ -20,7 +20,7 @@ export class TransportationComponent implements OnInit {
   }
 
   radioChangeHandler(event: any){
-    let obj = new Pledge(event.target.id, event.target.name, event.target.value);
+    let obj = new Pledge('transportation', event.target.name, event.target.value);
     let checker = false;
     for(let answer of Object.keys(this.questionService.answers)){
       var a = this.questionService.answers[answer];

@@ -5,27 +5,27 @@ export class Result{
 
     constructor(){}
 
-    setPledge(){
+    public setPledge(){
         this.pledgeCount++;
     }
 
-    getPledge(){
+    public getPledge():number{
         return this.pledgeCount;
     }
 
-    setDontPledge(){
+    public setDontPledge(){
         this.dontPledgeCount++;
     }
 
-    getDontPledge(){
+    public getDontPledge():number{
         return this.dontPledgeCount;
     }
 
-    setAlreadyPledge(){
+    public setAlreadyPledge(){
         this.alreadyPledgeCount++;
     }
 
-    getAlreadyPledged(){
+    public getAlreadyPledged():number{
         return this.alreadyPledgeCount;
     }
 }

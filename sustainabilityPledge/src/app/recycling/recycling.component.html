@@ -1,17 +1,23 @@
 <app-top-bar></app-top-bar>
 
-  <div *ngFor="let question of recyclingQuestion | async">
-    <h3> {{question.title}} </h3>
-    <p>{{question.question}}</p>
-    <input type="radio" id="{{question.category}}" value="{{question.yesOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
-    <label>{{question.yesOption}}</label>
-    <br>
-    <input type="radio" id="{{question.category}}" value="{{question.noOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
-    <label>{{question.noOption}}</label>
-    <br>
-    <input type="radio" id="{{question.category}}" value="{{question.doOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
-    <label>{{question.doOption}}</label>
-  </div>
+<div *ngFor="let question of recyclingQuestion | async; let indexOfElement=index;">
+  <h3> {{question.title}} </h3>
+  <p>{{question.question}}</p>
+  <section>
+    <div>
+      <input type="radio" id="{{question.yesOption}}{{indexOfElement}}" value="{{question.yesOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+      <label for="{{question.yesOption}}{{indexOfElement}}">{{question.yesOption}}</label>
+    </div>
+    <div>
+      <input type="radio" id="{{question.noOption}}{{indexOfElement}}" value="{{question.noOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+      <label for="{{question.noOption}}{{indexOfElement}}">{{question.noOption}}</label>
+    </div>
+    <div>
+      <input type="radio" id="{{question.doOption}}{{indexOfElement}}" value="{{question.doOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+      <label for="{{question.doOption}}{{indexOfElement}}">{{question.doOption}}</label>
+    </div>
+  </section>
+</div>
 
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-secondary" routerLink="/food">Back</button>

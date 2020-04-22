@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
-import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
+import {AngularFireDatabase} from '@angular/fire/database';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Pledge } from './models/Pledge';
@@ -23,9 +23,13 @@ export class QuestionService {
     this.data = this.db.list('Pledges').valueChanges();
    }
 
-  //  addTotalQuestions(n:number){
-  //   this.totalQuestions += n;
-  //  }
+   getTotalQuestions(){
+     return this.totalQuestions;
+   }
+
+   getProgress(){
+     return this.progress;
+   }
 
    getData(){
      return this.data;

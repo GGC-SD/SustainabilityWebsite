@@ -1,0 +1,35 @@
+section {
+    display: flex;
+    flex-flow: row wrap;
+}
+section > div {
+    flex: 1;
+    padding: 0.5rem;
+}
+input[type="radio"] {
+    display: none;
+}
+label {
+    display: block;
+    background: white;
+    border: 2px solid hsla(150, 75%, 50%, 1);
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+    position: relative;
+    cursor: pointer;
+}
+input[type="radio"]:checked + label {
+    background: hsla(150, 75%, 50%, 1);
+    color: hsla(215, 0%, 100%, 1);
+    box-shadow: 0px 0px 20px hsla(150, 100%, 50%, 0.75);
+}
+  
+@media only screen and (max-width: 700px) {
+    section {
+        flex-direction: column;
+    }
+  }

@@ -24,10 +24,19 @@ export class ResultComponent implements OnInit {
     this.questionService.getData().subscribe(data => {
       this.data = data;
       this.getResults();
-    })
+    });   
   }
-  getResultCount(s:string): Result{
-    return this.resultCount.get(s);
+
+  getPCount(s:string): number{
+    return this.resultCount.get(s).getPledge();
+  }
+
+  getDPCount(s:string):number{
+    return this.resultCount.get(s).getDontPledge();
+  }
+
+  getAPCount(s:string):number{
+    return this.resultCount.get(s).getAlreadyPledged();
   }
 
   counter(q:string, a:string){
