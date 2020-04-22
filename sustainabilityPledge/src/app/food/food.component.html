@@ -1,6 +1,6 @@
 <app-top-bar></app-top-bar>
-
-  <div *ngFor="let question of foodQuestion | async">
+<h1 style="text-align: center; color: #00704A;"><b><u>Food</u></b></h1>
+  <div *ngFor="let question of foodQuestion | async" style="text-align: center;">
     <h3> {{question.title}} </h3>
     <p>{{question.question}}</p>
     <input type="radio" id="{{question.category}}" value="{{question.yesOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
@@ -13,7 +13,9 @@
     <label>{{question.doOption}}</label>
   </div>
 
-  <div class="btn-group" role="group">
+  <div class="row">
+    <div class="col-md-2"></div>
+   <div class="btn-group btn-group-lg col-md-8" >
     <button type="button" class="btn btn-secondary" routerLink="/electricity">Back</button>
     <button type="button" class="btn btn-secondary" routerLink="/recycling">Next</button>
   </div>
