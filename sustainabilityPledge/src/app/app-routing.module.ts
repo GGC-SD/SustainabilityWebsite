@@ -12,6 +12,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChooseUsernameComponent } from './choose-username/choose-username.component';
 import { ResultComponent } from './result/result.component';
 import { AuthGuard } from './auth.guard';
+import {FaqComponent} from './faq/faq.component'
 
 
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   canActivate: [AuthGuard]
  },
 
-  {path: 'team',component: LoginComponent},
+  {path: 'faq',component: FaqComponent},
+  {path: 'about',component: LoginComponent},
 
   {path: 'water', component: WaterComponent,
   canActivate: [AuthGuard]},

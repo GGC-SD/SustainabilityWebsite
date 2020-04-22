@@ -1,13 +1,16 @@
 <app-top-bar></app-top-bar>
 
-<h3>Results</h3>
+<h1 style="text-align: center; color: #00704A;"><b><u>Results</u></b></h1>
 <br>
-<div *ngFor="let question of answers">
+<div *ngFor="let question of answers" style="text-align: center;">
     <h4>~Question~</h4>
     <h5>{{question.question}}</h5>
     <p style="color: green; font-size: 1.2em;">You answered: {{question.answer}}</p>
     <p style="font-size: 1.2em;">How others answered:</p>
-    <p style="color: blue; font-size: 1.2em;">Pledged: {{getPCount(question.question)}}</p>   
-    <p style="color: red; font-size: 1.2em;">Do not Pledge: {{getDPCount(question.question)}}</p>   
+  <div class="row" style="margin-left: 297px;">
+    <p style="color: blue; font-size: 1.2em;">Pledged: {{getPCount(question.question)}}</p>&nbsp;&nbsp;
+    <p style="color: red; font-size: 1.2em;">Do not Pledge: {{getDPCount(question.question)}}</p>&nbsp;&nbsp;
     <p style="color: orange; font-size: 1.2em;">Already Pledged: {{getAPCount(question.question)}}</p>
+
+  </div>
 </div>

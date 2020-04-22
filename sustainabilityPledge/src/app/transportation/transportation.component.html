@@ -1,6 +1,6 @@
 <app-top-bar></app-top-bar>
-
-<div *ngFor="let question of transportationQuestions | async; let indexOfElement=index;">
+<h1 style="text-align: center; color: #00704A;"><b><u>Transportation</u></b></h1>
+<div *ngFor="let question of transportationQuestions | async; let indexOfElement=index;" style="text-align: center;">
   <h3> {{question.title}} </h3>
   <p>{{question.question}}</p>
   <section>
@@ -19,7 +19,9 @@
   </section>
 </div>
 
-  <div class="btn-group" role="group">
+  <div class="row">
+    <div class="col-md-2"></div>
+   <div class="btn-group btn-group-lg col-md-8" >
     <button type="button" class="btn btn-secondary" routerLink="/recycling">Back</button>
     <button type="submit" class="btn btn-secondary" (click)="onSubmit()">Submit</button>
   </div>

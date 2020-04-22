@@ -1,13 +1,15 @@
-<div  class="container-fluid" style="background-color: #00704A; text-align: center; height: 123px;">
-    <h1  style="color: white; font-size: 70px;">
+
+<div class="container-fluid" style="background-color: #00704A; text-align: center;">
+  <h1 style="color: white; font-size: 70px;">
+    🐻 GGC Sustainability Pledge 🌱</h1>
+</div>
+
+
+<div  class="container-fluid" style="background-color: #858b89; text-align: center; margin-top: -8px;">
+    <h1  style="color: white; font-size: 40px;">
       👮Credentials👮‍♀️ </h1>
-
-
-
+      <a class="btn btn-info " routerLink="/about" > About Us</a>
   </div>
-
-
-
 
 <div class="container">
 
@@ -29,7 +31,7 @@
     required [pattern]="passwordPattern">
 
     </div>
-    <button (click)="signIn()" class="btn btn-outline-primary mr-1"   style="margin-left:5px;">Login</button>
+    <button (click)="signIn()" class="btn btn-outline-info mr-1"   style="margin-left:5px;">Login</button>
     <button (click)="signUp()" class="btn btn-outline-success">Sign Up</button>
     </div>
     <button (click)="signOut()" class="btn btn-outline-danger mr-1" *ngIf="authenticationService.userData | async">Yes!</button>

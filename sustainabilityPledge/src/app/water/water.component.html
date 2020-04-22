@@ -1,6 +1,6 @@
 <app-top-bar></app-top-bar>
-
-<div *ngFor="let question of waterQuestions | async; let indexOfElement=index;">
+<h1 style="text-align: center; color: #00704A;"><b><u>Water</u></b></h1>
+<div *ngFor="let question of waterQuestions | async; let indexOfElement=index;" style="text-align: center;">
   <h3> {{question.title}} </h3>
   <p>{{question.question}}</p>
   <section>
@@ -19,7 +19,10 @@
   </section>
 </div>
 
-<div class="btn-group" role="group">
+<div class="row">
+  <div class="col-md-2"></div>
+ <div class="btn-group btn-group-lg col-md-8" >
   <button type="button" class="btn btn-secondary" routerLink="/electricity">Next</button>
+  </div>
 </div>
 

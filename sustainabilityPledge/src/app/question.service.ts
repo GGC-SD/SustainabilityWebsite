@@ -13,7 +13,7 @@ export class QuestionService {
   progress: number = 0;
   answers: Pledge[] = [];
   data: Observable<any[]>;
-  totalQuestions: number = 10; //REPLACE WITH NEW TOTAL IF ADDED QUESTIONS TO JSON
+  totalQuestions: number = 22; //REPLACE WITH NEW TOTAL IF ADDED QUESTIONS TO JSON
 
   constructor(
     private http: HttpClient,
@@ -41,7 +41,7 @@ export class QuestionService {
    }
 
   onSubmit(){
-    if(this.progress != this.totalQuestions){ 
+    if(this.progress != this.totalQuestions){
       window.alert('Answer all of the questions before submitting!');
       return;
     }else{
@@ -55,7 +55,7 @@ export class QuestionService {
         console.error("Error adding document: ", error);
       });
       this.router.navigate(['/result']);
-    }   
+    }
   }
 
   getWater(){
@@ -65,7 +65,7 @@ export class QuestionService {
   getElectricity(){
     return this.http.get('/assets/electricity.json');
   }
-  
+
   getFood(){
     return this.http.get('/assets/food.json');
   }

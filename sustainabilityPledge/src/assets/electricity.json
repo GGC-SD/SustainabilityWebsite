@@ -14,5 +14,21 @@
         "yesOption": "Pledge",
         "noOption": "Do not Pledge",
         "doOption": "Already Pledged"
-    }
+    },
+    {
+      "category": "electricity",
+      "title": "Turn Off Appliances",
+      "question": "I will turn off appliances when I am not using them",
+      "yesOption": "Pledge",
+      "noOption": "Do not Pledge",
+      "doOption": "Already Pledged"
+  },
+  {
+    "category": "electricity",
+    "title": "Using Fan",
+    "question": "I will use a fan rather than a thermostat ",
+    "yesOption": "Pledge",
+    "noOption": "Do not Pledge",
+    "doOption": "Already Pledged"
+}
 ]

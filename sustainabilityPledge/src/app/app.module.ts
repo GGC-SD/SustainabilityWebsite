@@ -29,6 +29,7 @@ import { ResultComponent } from './result/result.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { AuthGuard } from './auth.guard';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { FaqComponent } from './faq/faq.component';
 
 //
 
@@ -46,7 +47,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     ChooseUsernameComponent,
     ResultComponent,
     TopBarComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,

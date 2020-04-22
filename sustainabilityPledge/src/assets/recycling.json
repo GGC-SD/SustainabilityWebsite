@@ -14,5 +14,21 @@
         "yesOption": "Pledge",
         "noOption": "Do not Pledge",
         "doOption": "Already Pledged"
-    }
+    },
+    {
+      "category": "recycling",
+      "title": "Reusable Bags",
+      "question": "I will use my own reusable bag to shop",
+      "yesOption": "Pledge",
+      "noOption": "Do not Pledge",
+      "doOption": "Already Pledged"
+  },
+  {
+    "category": "recycling",
+    "title": "Sustainable Tupperware",
+    "question": "I will use re-washable plates utensils and Tupperware rather than using plastic or Styrofoam",
+    "yesOption": "Pledge",
+    "noOption": "Do not Pledge",
+    "doOption": "Already Pledged"
+}
 ]

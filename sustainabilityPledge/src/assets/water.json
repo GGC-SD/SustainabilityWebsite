@@ -14,5 +14,21 @@
         "yesOption": "Pledge",
         "noOption": "Do not Pledge",
         "doOption": "Already Pledged"
-    }
+    },
+    {
+      "category": "water",
+      "title": "Laundry",
+      "question": "I will do laundry once a week and with cold water",
+      "yesOption": "Pledge",
+      "noOption": "Do not Pledge",
+      "doOption": "Already Pledged"
+  },
+  {
+    "category": "water",
+    "title": "Showers",
+    "question": "I will take a faster shower and turn off water when soaping",
+    "yesOption": "Pledge",
+    "noOption": "Do not Pledge",
+    "doOption": "Already Pledged"
+}
 ]

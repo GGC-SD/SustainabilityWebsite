@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sustainabilityPledge';
+  // myImg: string ='assets/images/pic1.jpg';
 }
