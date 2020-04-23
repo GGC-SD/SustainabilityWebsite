@@ -7,10 +7,10 @@
     <h5>{{question.question}}</h5>
     <p style="color: green; font-size: 1.2em;">You answered: {{question.answer}}</p>
     <p style="font-size: 1.2em;">How others answered:</p>
-  <div class="row" style="margin-left: 550px;">
-    <p style="color: blue; font-size: 1.2em;">Pledged: {{getPCount(question.question)}}</p>&nbsp;&nbsp;
-    <p style="color: red; font-size: 1.2em;">Do not Pledge: {{getDPCount(question.question)}}</p>&nbsp;&nbsp;
-    <p style="color: orange; font-size: 1.2em;">Already Pledged: {{getAPCount(question.question)}}</p>
+  <div>
+    <span style="color: blue; font-size: 1.2em;">Pledged: {{getPCount(question.question)}}</span>&nbsp;&nbsp;
+    <span style="color: red; font-size: 1.2em;">Do not Pledge: {{getDPCount(question.question)}}</span>&nbsp;&nbsp;
+    <span style="color: orange; font-size: 1.2em;">Already Pledged: {{getAPCount(question.question)}}</span>
 
   </div>
 </div>
