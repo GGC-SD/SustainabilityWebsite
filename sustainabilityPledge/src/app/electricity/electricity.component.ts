@@ -23,7 +23,7 @@ export class ElectricityComponent implements OnInit {
     let obj = new Pledge('electricity', event.target.name, event.target.value);
     let checker = false;
     for(let answer of Object.keys(this.questionService.answers)){
-      var a = this.questionService.answers[answer];
+      let a = this.questionService.answers[answer];
       if(a.question == obj.question){
         checker = true;
       }

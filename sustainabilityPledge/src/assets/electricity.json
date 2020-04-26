@@ -26,7 +26,7 @@
   {
     "category": "electricity",
     "title": "Using Fan",
-    "question": "I will use a fan rather than a thermostat ",
+    "question": "I will use a fan rather than a thermostat",
     "yesOption": "Pledge",
     "noOption": "Do not Pledge",
     "doOption": "Already Pledged"

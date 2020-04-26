@@ -22,7 +22,7 @@
     <div *ngIf="!(authenticationService.userData | async)">
     <div class="form-group">
     <label style=" font-size: 30px;"  for="email">Email address:  </label>
-    <input type="text" class="form-control" [(ngModel)]="email" placeholder="Valid email format required"
+    <input type="text" class="form-control" [(ngModel)]="email" id="email" placeholder="Valid email format required"
      required [pattern]="emailPattern">
     </div>
     <div class="form-group">
@@ -31,8 +31,8 @@
     required [pattern]="passwordPattern">
 
     </div>
-    <button (click)="signIn()" class="btn btn-outline-info mr-1"   style="margin-left:5px;">Login</button>
-    <button (click)="signUp()" class="btn btn-outline-success">Sign Up</button>
+    <button (click)="signIn()" id="login" class="btn btn-outline-info mr-1"   style="margin-left:5px;">Login</button>
+    <button (click)="signUp()" id="signUp" class="btn btn-outline-success">Sign Up</button>
     </div>
     <button (click)="signOut()" class="btn btn-outline-danger mr-1" *ngIf="authenticationService.userData | async">Yes!</button>
     <button  class="btn btn-outline-success" routerLink="/" *ngIf="authenticationService.userData | async">Home</button>

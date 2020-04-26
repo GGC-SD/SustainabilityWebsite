@@ -23,8 +23,8 @@ export class ResultComponent implements OnInit {
     this.answers = this.questionService.answers;
     this.questionService.getData().subscribe(data => {
       this.data = data;
-      this.getResults();
-    });   
+      this.getResults(this.data);
+    });
   }
 
   getPCount(s:string): number{
@@ -52,9 +52,9 @@ export class ResultComponent implements OnInit {
     }
   }
 
-  getResults(){
-    for(let d of Object.keys(this.data)){
-      let p = this.data[d];
+  getResults(data: Pledge[]){
+    for(let d of Object.keys(data)){
+      let p = data[d];
       for(let r of Object.keys(p)){
         let a = p[r]; //arrays after pledge
         for(let b of Object.keys(a)){

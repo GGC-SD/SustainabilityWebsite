@@ -15,18 +15,19 @@ public class PledgeTest {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
     }
-
+//Sleep to be able to record test and describe what's happening
     @Test
     public void testSite() throws InterruptedException{
         driver.get("localhost:4200/login");
         WebElement email = driver.findElement(By.id("email"));
         WebElement pwd = driver.findElement(By.id("pwd"));
-        WebElement signUp = driver.findElement(By.xpath("/html/body/app-root/app-choose-username/div[2]/div/div/div/button[2]"));
-        WebElement login = driver.findElement(By.xpath("/html/body/app-root/app-choose-username/div[2]/div/div/div/button[1]"));
+        WebElement signUp = driver.findElement(By.id("signUp"));
         Thread.sleep(2000);
+        //Test email regex works
         email.sendKeys("LearningIsCool");
         Thread.sleep(3000);
         email.clear();
+        //Test sign up with existing account and password regex
         email.sendKeys("dgomez3@ggc.edu");
         Thread.sleep(2000);
         pwd.sendKeys("pass123");
@@ -36,157 +37,122 @@ public class PledgeTest {
         Thread.sleep(2000);
         signUp.click();
         Thread.sleep(3000);
+        //Test signup works with new email
         email.sendKeys("den.gomez12@gmail.com");
         pwd.sendKeys("pass1234");
         Thread.sleep(4000);
         signUp.click();
         Thread.sleep(4000);
-        driver.get("localhost:4200/login");
+        //logout
+        driver.findElement(By.xpath("/html/body/app-root/app-home/nav/button[2]")).click(); //logout btn
         Thread.sleep(3000);
-        try {
-            WebElement logout = driver.findElement(By.xpath("/html/body/app-root/app-choose-username/div[2]/div/div/button"));
-            logout.click();
-        } catch(org.openqa.selenium.StaleElementReferenceException e){
-            WebElement logout = driver.findElement(By.xpath("/html/body/app-root/app-choose-username/div[2]/div/div/button"));
-            logout.click();
-        }
+        driver.findElement(By.xpath("/html/body/app-root/app-choose-username/div[3]/div/div/button[1]")).click(); //confirm logout
         Thread.sleep(2000);
+        //login with newly created account
         WebElement email2 = driver.findElement(By.id("email"));
         WebElement pwd2 = driver.findElement(By.id("pwd"));
         email2.sendKeys("den.gomez12@gmail.com");
         Thread.sleep(2000);
         pwd2.sendKeys("pass1234");
         Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/app-root/app-choose-username/div[2]/div/div/div/button[1]")).click();
+        driver.findElement(By.id("login")).click(); //login btn
         Thread.sleep(4000);
-        driver.findElement(By.id("dropdownMenuButton")).click();
+
+        //Test all buttons on home page
+        driver.findElement(By.id("getInvolved")).click(); //drop down menu btn
         Thread.sleep(1000);
-        //ENVIRONMENTAL CLUBS
-        driver.findElement(By.xpath("/html/body/app-root/app-home/nav/div[1]/div/a[1]")).click();
+        //environmental clubs & events link opens new tab
+        driver.findElement(By.id("environmentalClub")).click(); //club & events btn
         ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs2.get(1));
         driver.close();
         driver.switchTo().window(tabs2.get(0));
         Thread.sleep(2000);
-        //GGC EARTH DAY
-        driver.findElement(By.id("dropdownMenuButton")).click();
+        //GGC earth day link opens new tab
+        driver.findElement(By.id("getInvolved")).click(); //drop down menu btn
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/app-root/app-home/nav/div[1]/div/a[2]")).click();
+        driver.findElement(By.id("earthDay")).click(); //ggc earth day btn
         ArrayList<String> tabs3 = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs3.get(1));
         driver.close();
         driver.switchTo().window(tabs3.get(0));
         Thread.sleep(2000);
-        driver.findElement(By.id("bigButton")).click();
+        //About us
+        driver.findElement(By.id("about")).click(); //about us btn
+        Thread.sleep(1000);
+        driver.findElement(By.id("aboutHomeBtn")).click(); //back to home
+
+        //start pledge
+        driver.findElement(By.id("bigButton")).click(); //start the pledge btn
         Thread.sleep(3000);
+
+        //test top bar
+        driver.findElement(By.xpath("/html/body/app-root/app-water/app-top-bar/nav/div/a[2]")).click(); //electricity btn
+        driver.findElement(By.xpath("/html/body/app-root/app-electricity/app-top-bar/nav/div/a[3]")).click(); //food btn
+        driver.findElement(By.xpath("/html/body/app-root/app-food/app-top-bar/nav/div/a[4]")).click(); //recycling btn
+        driver.findElement(By.xpath("/html/body/app-root/app-recycling/app-top-bar/nav/div/a[5]")).click(); //transportation btn
+        driver.findElement(By.xpath("/html/body/app-root/app-transportation/app-top-bar/nav/div/a[1]")).click(); //water btn
+        Thread.sleep(500);
+        //FAQ btn
+        driver.findElement(By.id("faq")).click();
+        Thread.sleep(500);
+        driver.findElement(By.id("faqHome")).click();
+        Thread.sleep(500);
+
         //WATER
-        driver.findElement(By.id("waterYes")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("waterNo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("waterDo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("waterYes2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("waterNo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("waterDo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-water/div[2]/button")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-electricity/div[2]/button[1]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-water/div[2]/button")).click();
-        Thread.sleep(500);
+        int numberOfWaterQuestions = 4; //update if questions are added to JSON
+        for(int i=1; i <= numberOfWaterQuestions; i++){
+            for(int j=1; j <= 3; j++){
+                driver.findElement(By.xpath("/html/body/app-root/app-water/div["+i+"]/section/div["+j+"]/label")).click();
+                Thread.sleep(500);
+            }
+        }
+        driver.findElement(By.xpath("/html/body/app-root/app-water/div[5]/div[2]/button")).click(); //next btn to electricity
+        Thread.sleep(1000);
+
         //ELECTRICITY
-        driver.findElement(By.id("eYes")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("eNo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("eDo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("eYes2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("eNo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("eDo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-electricity/div[2]/button[2]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-food/div[2]/button[1]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-electricity/div[2]/button[2]")).click();
-        driver.findElement(By.id("fYes")).click();
+        int numberOfElectricityQuestions = 4; //update if questions are added to JSON
+        for(int i=1; i <= numberOfElectricityQuestions; i++){
+            for(int j=1; j <= 3; j++){
+                driver.findElement(By.xpath("/html/body/app-root/app-electricity/div["+i+"]/section/div["+j+"]/label")).click();
+                Thread.sleep(500);
+            }
+        }
+        driver.findElement(By.xpath("/html/body/app-root/app-electricity/div[5]/div[2]/button[2]")).click(); //next btn to food
+        Thread.sleep(1000);
+
         //FOOD
-        Thread.sleep(500);
-        driver.findElement(By.id("fNo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("fDo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("fYes2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("fNo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("fDo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-food/div[2]/button[2]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-recycling/div[2]/button[1]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-food/div[2]/button[2]")).click();
-        Thread.sleep(500);
+        int numberOfFoodQuestions = 6; //update if questions are added to JSON
+        for(int i=1; i <= numberOfFoodQuestions; i++){
+            for(int j=1; j <= 3; j++){
+                driver.findElement(By.xpath("/html/body/app-root/app-food/div["+i+"]/section/div["+j+"]/label")).click();
+                Thread.sleep(500);
+            }
+        }
+        driver.findElement(By.xpath("/html/body/app-root/app-food/div[7]/div[2]/button[2]")).click(); //next btn to recycling
+        Thread.sleep(1000);
+
         //RECYCLING
-        driver.findElement(By.id("rYes")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("rNo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("rDo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("rYes2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("rNo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("rDo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-recycling/div[2]/button[2]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-transportation/div[2]/button[1]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-recycling/div[2]/button[2]")).click();
-        Thread.sleep(500);
+        int numberOfRecyclingQuestions = 4; //update if questions are added to JSON
+        for(int i=1; i <= numberOfRecyclingQuestions; i++){
+            for(int j=1; j <= 3; j++){
+                driver.findElement(By.xpath("/html/body/app-root/app-recycling/div["+i+"]/section/div["+j+"]/label")).click();
+                Thread.sleep(500);
+            }
+        }
+        driver.findElement(By.xpath("/html/body/app-root/app-recycling/div[5]/div[2]/button[2]")).click(); //next btn to transportation
+        Thread.sleep(1000);
+
         //TRANSPORTATION
-        driver.findElement(By.id("tYes")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("tNo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("tDo")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("tYes2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("tNo2")).click();
-        Thread.sleep(500);
-        driver.findElement(By.id("tDo2")).click();
-        Thread.sleep(500);
-        // SUBMIT FORM HERE
-
-        //NAV TABS
-        driver.findElement(By.xpath("/html/body/app-root/app-transportation/nav/div/a[1]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-water/nav/div/a[2]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-electricity/nav/div/a[3]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-food/nav/div/a[4]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-recycling/nav/div/a[5]")).click();
-        Thread.sleep(500);
-        driver.findElement(By.xpath("/html/body/app-root/app-transportation/nav/div/a[5]")).click();
-        Thread.sleep(500);
-//        driver.findElement(By.xpath("/html/body/app-root/app-home/button")).click();
-        //LOGOUT NAV BUTTON (NOT WORKING ATM)
-//        Thread.sleep(500);
-//        driver.findElement(By.xpath("/html/body/app-root/app-water/nav/div/a[7]")).click();
-
+        int numberOfTransportationQuestions = 4; //update if questions are added to JSON
+        for(int i=1; i <= numberOfTransportationQuestions; i++){
+            for(int j=1; j <= 3; j++){
+                driver.findElement(By.xpath("/html/body/app-root/app-transportation/div["+i+"]/section/div["+j+"]/label")).click();
+                Thread.sleep(500);
+            }
+        }
+        driver.findElement(By.xpath("/html/body/app-root/app-transportation/div[5]/div[2]/button[2]")).click(); //submit btn
+        Thread.sleep(1000);
     }
 
 }
