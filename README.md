@@ -2,6 +2,11 @@
 # SustainabilityWebsite.
 
 ## Team Avengers
+
+### Description / Abstract
+  - This project is on a website that was made for the Sustainability Committee in order to spread a pledge that 
+    will help with the environment. with a small contribution on the pledge can help and change the world for the
+    better.
 ### Team Roles  
 * **Chris Martinez**
 1. _UI/UX design_ :crossed_swords:
@@ -16,11 +21,11 @@
 2. _Team manager_ :santa: :gift:
   
   
-##  Repo Location
+###  Repo Location
   - [**click here**](https://github.com/GGC-SD/SustainabilityWebsite)
 
-##  Progress Tracking Tools
+###  Progress Tracking Tools
   - Jira
 
-##   Communication Tools
+###   Communication Tools
   - Discord
