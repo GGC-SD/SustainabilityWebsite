@@ -2,15 +2,15 @@
     {
         "category": "water",
         "title": "Water Flask",
-        "question": "I will use a water Flask instead of a water Bottle",
+        "question": "I will use a reusable water bottle/flask instead of purchasing disposable water bottles",
         "yesOption": "Pledge",
         "noOption": "Do not Pledge",
         "doOption": "Already Pledged"
     },
     {
         "category": "water",
-        "title": "Turn Off Fauset",
-        "question": "I will turn off the water fauset while I am brushing my teeth or showering",
+        "title": "Turn Off Faucet",
+        "question": "I will turn off the water faucet while I am brushing my teeth or showering",
         "yesOption": "Pledge",
         "noOption": "Do not Pledge",
         "doOption": "Already Pledged"

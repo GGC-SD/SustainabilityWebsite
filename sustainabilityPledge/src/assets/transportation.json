@@ -1,34 +1,34 @@
 [
-    {
-        "category": "transportation",
-        "title": "Car Pulling",
-        "question": "I will share rides or give rides to have less cars on the roads",
-        "yesOption": "Pledge",
-        "noOption": "Do not Pledge",
-        "doOption": "Already Pledged"
-    },
-    {
-        "category": "transportation",
-        "title": "Turn off Vehicle when not in use",
-        "question": "I will turn off my car when I am physically not driving it",
-        "yesOption": "Pledge",
-        "noOption": "Do not Pledge",
-        "doOption": "Already Pledged"
-    },
-    {
+  {
       "category": "transportation",
-      "title": "Riding Bikes or Walking",
-      "question": "I will ride bikes or walk to go to close by stores, parks, and friends’ places than using a car",
+      "title": "Carpooling",
+      "question": "I will share rides or give rides to have less cars on the roads",
+      "yesOption": "Pledge",
+      "noOption": "Do not Pledge",
+      "doOption": "Already Pledged"
+  },
+  {
+      "category": "transportation",
+      "title": "Turn off Vehicle when not in use",
+      "question": "I will turn off my car when I am physically not driving it",
       "yesOption": "Pledge",
       "noOption": "Do not Pledge",
       "doOption": "Already Pledged"
   },
   {
     "category": "transportation",
-    "title": "Inner City Travel",
-    "question": "I will use the inner-city railways and subway to travel around a city or cross country",
+    "title": "Riding Bikes or Walking",
+    "question": "I will ride bikes or walk to go to close by stores, parks, and friends’ places than using a car",
     "yesOption": "Pledge",
     "noOption": "Do not Pledge",
     "doOption": "Already Pledged"
+},
+{
+  "category": "transportation",
+  "title": "Public Transportation",
+  "question": "I will use public transportation (buses, subway, or railway) to travel within and between cities",
+  "yesOption": "Pledge",
+  "noOption": "Do not Pledge",
+  "doOption": "Already Pledged"
 }
 ]

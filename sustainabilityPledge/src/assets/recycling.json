@@ -1,34 +1,34 @@
 [
-    {
-        "category": "recycling",
-        "title": "Throw Water Bottles in Recycle Bin",
-        "question": "I will not throw away water bottles in trash cans I will recycle",
-        "yesOption": "Pledge",
-        "noOption": "Do not Pledge",
-        "doOption": "Already Pledged"
-    },
-    {
-        "category": "recycling",
-        "title": "Hand-Me-Down/Thrift",
-        "question": "I will use handmedownsthrift instead of buying",
-        "yesOption": "Pledge",
-        "noOption": "Do not Pledge",
-        "doOption": "Already Pledged"
-    },
-    {
+  {
       "category": "recycling",
-      "title": "Reusable Bags",
-      "question": "I will use my own reusable bag to shop",
+      "title": "Dispose Water Bottles in Recycle Bin",
+      "question": "I will put disposable plastic bottles and aluminum cans in the recycling bin instead of the trash",
+      "yesOption": "Pledge",
+      "noOption": "Do not Pledge",
+      "doOption": "Already Pledged"
+  },
+  {
+      "category": "recycling",
+      "title": "Hand-Me-Down/Thrift",
+      "question": "I will use hand-me-downs thrift instead of buying",
       "yesOption": "Pledge",
       "noOption": "Do not Pledge",
       "doOption": "Already Pledged"
   },
   {
     "category": "recycling",
-    "title": "Sustainable Tupperware",
-    "question": "I will use re-washable plates utensils and Tupperware rather than using plastic or Styrofoam",
+    "title": "Reusable Bags",
+    "question": "I will use my own reusable bag to shop",
     "yesOption": "Pledge",
     "noOption": "Do not Pledge",
     "doOption": "Already Pledged"
+},
+{
+  "category": "recycling",
+  "title": "Sustainable Tupperware",
+  "question": "I will use re-washable plates utensils and Tupperware rather than using plastic or Styrofoam",
+  "yesOption": "Pledge",
+  "noOption": "Do not Pledge",
+  "doOption": "Already Pledged"
 }
 ]
