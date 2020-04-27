@@ -28,13 +28,13 @@
 ### Installations
 
 ### How To Run
-- add user name and a password
-- click on "sign-up" the first time
-- click on the big "Start the Pledge" button
-- take the pledge and answer all the questions before submission.
-- see your results
-- explore
-- signout
+1. add user name and a password
+2. click on "sign-up" the first time
+3. click on the big "Start the Pledge" button
+4. take the pledge and answer all the questions before submission.
+5. see your results
+6. explore
+7. signout
 
 ### Team Roles  
 * **Chris Martinez**
