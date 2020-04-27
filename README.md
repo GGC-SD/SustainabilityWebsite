@@ -50,7 +50,7 @@
 2. _Team manager_ :santa: :gift:
 
 ### Flyer
-- [**click here**](UntitledArtwork_1.pdf)
+- UntitledArtwork_1.pdf
 ###  Repo Location
   - [**click here**](https://github.com/GGC-SD/SustainabilityWebsite)
 
