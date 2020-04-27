@@ -16,11 +16,11 @@
 2. _Team manager_ :santa: :gift:
   
   
-* **Repo Location**
+##  Repo Location
   - [**click here**](https://github.com/GGC-SD/SustainabilityWebsite)
 
-* **Progress Tracking Tools**
+##  Progress Tracking Tools
   - Jira
 
-* **Communication Tools**
+##   Communication Tools
   - Discord
