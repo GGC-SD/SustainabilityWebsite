@@ -26,6 +26,10 @@
  - Selenium
  
 ### Installations
+- firebase, javascript, and typescript runs the back end and database of the website
+- Angular 9 and Bootstrap 4 is what we are using for the website
+- we used npm installs to add angular dependencies on the command line
+- we used HTML5 for the front end of the website
 
 ### How To Run
 1. add user name and a password
