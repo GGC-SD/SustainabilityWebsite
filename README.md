@@ -32,6 +32,7 @@
 - we used HTML5 for the front end of the website
 - we used git clone to clone the projects to our local repo
 - we used git add/commit/push after everything was running in the project smoothly 
+
 ### How To Run
 1. add user name and a password
 2. click on "sign-up" the first time
