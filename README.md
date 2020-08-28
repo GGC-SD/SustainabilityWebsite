@@ -44,7 +44,7 @@
 
 ### Team Roles
 
-##Spring 2020
+##### Spring 2020
 * **Chris Martinez**
 1. _UI/UX design_ :crossed_swords:
 2. _Client Laison_ :tokyo_tower:
@@ -57,7 +57,7 @@
 1. _Code architecture/lead programmer_ :hammer:
 2. _Team manager_ :santa: :gift:
 
-##Fall 2020
+##### Fall 2020
 * **Angel Mercado**
 1. _Data Modeler_ :ballot_box:
 2. _Documentation_ 	:bookmark_tabs:
