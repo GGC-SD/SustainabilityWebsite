@@ -62,6 +62,10 @@
 1. _Data Modeler_ :ballot_box:
 2. _Documentation_ 	:bookmark_tabs:
 
+* **Cesar Lopez**
+1. _Code Architecture/Lead Programmer_ :bird:
+2. _Documentation_ :rocket:
+
 ### Flyer
 - [**click here**](https://d1b10bmlvqabco.cloudfront.net/attach/k508k7w18w11xp/jqk0qn8fcs075r/k98q7cevb540/UntitledArtwork_1.pdf)
 
