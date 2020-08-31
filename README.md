@@ -66,6 +66,14 @@
 1. _Code Architecture/Lead Programmer_ :bird:
 2. _Documentation_ :rocket:
 
+* **Trevor Lee**
+1. _Testing_
+2. _Team Manager_
+
+* **Jonathan Roof**
+1. _UI/UX Designer_
+2. _Client Liason_
+
 ### Flyer
 - [**click here**](https://d1b10bmlvqabco.cloudfront.net/attach/k508k7w18w11xp/jqk0qn8fcs075r/k98q7cevb540/UntitledArtwork_1.pdf)
 
