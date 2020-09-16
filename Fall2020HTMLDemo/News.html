@@ -2,7 +2,26 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-  </head>
+    <style type="text/css">
+#NewsText {
+  font-family: "Arial", "Helvetica", "sans-serif";
+  left: 30%;
+  right: 30%;
+  display: inline;
+  clear: both;
+  position: static;
+}
+
+#NewsDescription {
+  left: 25%;
+  right: 25%;
+  position: fixed;
+  overflow: visible;
+  clear: both;
+  text-overflow: ellipsis;
+}
+
+</style></head>
   <body id="NewsBody">
     <title>News</title>
     <style>
@@ -59,8 +78,8 @@ footer {
   color: white;
 }
 
-</style> <div class="navigation"> <a href="SIOS.html"><img class="logo-img" src="SIOSPage/SIOSHeader.png"
-          alt="Logo" title="GGC Logo"></a>
+</style> <div class="navigation" id="NewsText"> <a href="SIOS.html"><img class="logo-img"
+          src="SIOSPage/SIOSHeader.png" alt="Logo" title="GGC Logo"></a>
       <ul id="navBarList">
         <li><a class="active" href="#profile">Profile</a></li>
         <li><a href="News.html">News</a></li>
@@ -68,10 +87,10 @@ footer {
         <li><a href="GetInvolved.html">Get Involved</a></li>
       </ul>
       <h1 style="text-align: center" id="Header1"> News </h1>
-      <p style="text-align: center">The GGC Student Innovators Org for
-        Sustainability Pledge is a way for students and faculty to pledge their
-        support for the environment. This tab will provide with links and
-        resources for news about the environment</p>
+      <p style="text-align: center;" id="NewsDescription">The GGC Student
+        Innovators Org for Sustainability Pledge is a way for students and
+        faculty to pledge their support for the environment. This tab will
+        provide with links and resources for news about the environment.</p>
       <p style="text-align: center"><br>
       </p>
       <p style="text-align: center"><br>
