@@ -32,14 +32,14 @@
 }
 
 #ProfileBox {
-  position: relative;
+  position: static;
   background-color: #00704a;
-  left: 30%;
-  right: 300%;
-  clear: both;
+  clear: left;
   display: block;
   border: 10pt solid #00704a;
   border-radius: 5px;
+  float: none;
+  visibility: visible;
 }
 
 #profilePic {
@@ -49,8 +49,9 @@ box-shadow: 2px 2px 3px 2px #333333;
 
 </style></head>
   <body id="NewsBody">
-    <title>Profile</title>
-    <style>
+    <div style="text-align: center;">
+      <title>Profile</title>
+      <style>
 ul {
   list-style-type: none;
   margin: 0px;
@@ -107,7 +108,8 @@ footer {
   color: white;
 }
 
-</style> <div class="navigation" id="NewsText"> <a href="SIOS.html"><img class="logo-img"
+</style></div>
+    <div class="navigation" id="NewsText"> <a href="SIOS.html"><img class="logo-img"
           src="SIOSPage/SIOSHeader.png" alt="Logo" title="GGC Logo"></a>
       <ul id="navBarList">
         <li><a class="active" href="#profile">Profile</a></li>
@@ -116,7 +118,9 @@ footer {
         <li><a href="GetInvolved.html">Get Involved</a></li>
       </ul>
       <br>
-      <div id="ProfileBox" style="text-align: center; width: 558px;">
+    </div>
+    <div style="width:558px; margin:0 auto;">
+      <div id="ProfileBox" style="width: 558px; text-align: center;">
         <h1> User Profile </h1>
         <div style="text-align: left;"><img src="Images/profile.jpg" alt="Profile Pic"
             title="Profile Pic" style="width: 325px; height: 204px;" id="profilePic"></div>
