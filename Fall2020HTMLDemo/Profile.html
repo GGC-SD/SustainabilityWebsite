@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style type="text/css">
+#NewsText {
+  font-family: "Arial", "Helvetica", "sans-serif";
+  left: 30%;
+  right: 30%;
+  display: inline;
+  clear: both;
+  position: static;
+}
+
+#NewsDescription {
+  left: 22%;
+  right: 22%;
+  position: fixed;
+  overflow: visible;
+  clear: both;
+  text-overflow: ellipsis;
+}
+
+#Profile {
+  text-align: center;
+  font-family: "Arial", "Helvetica", "sans-serif";
+  background-color: #00704a;
+  display: block;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+}
+
+#ProfileBox {
+  position: relative;
+  background-color: #00704a;
+  left: 30%;
+  right: 300%;
+  clear: both;
+  display: block;
+  border: 10pt solid #00704a;
+}
+
+#profilePic {
+  border-radius: 5px;
+box-shadow: 2px 2px 3px 2px #333333;
+}
+
+</style></head>
+  <body id="NewsBody">
+    <title>Profile</title>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-image: linear-gradient(#00704a, #005b3c);
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 24pt;
+  padding: 42px 36px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+.logo-img {
+  position: absolute;
+  left: 20px;
+  top: 27px;
+  margin: 0px;
+}
+
+#navBarList {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#NewsBody {
+  color: white;
+  background-color: #a5acb0;
+}
+
+#globeWeb {
+  color: white;
+  font-size: larger;
+}
+
+#Footer {
+  font-family: "Arial", "Helvetica", "sans-serif";
+  position: static;
+}
+
+footer {
+  background-color: #00704a;
+  color: white;
+}
+
+</style> <div class="navigation" id="NewsText"> <a href="SIOS.html"><img class="logo-img"
+          src="SIOSPage/SIOSHeader.png" alt="Logo" title="GGC Logo"></a>
+      <ul id="navBarList">
+        <li><a class="active" href="#profile">Profile</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="login.html">Pledge</a></li>
+        <li><a href="GetInvolved.html">Get Involved</a></li>
+      </ul>
+      <br>
+      <div id="ProfileBox" style="text-align: center; width: 558px;">
+        <h1> User Profile </h1>
+        <div style="text-align: left;"><img src="Images/profile.jpg" alt="Profile Pic"
+            title="Profile Pic" style="width: 325px; height: 204px;" id="profilePic"></div>
+        <p style="text-align: left;">Name: _______________</p>
+        <p style="text-align: left;">Email: _______________</p>
+        <p style="text-align: left;">Pledges Taken:</p>
+      </div>
+    </div>
+    <br>
+    <footer id="Footer">© 2020 The Green Machine</footer>
+  </body>
+</html>
