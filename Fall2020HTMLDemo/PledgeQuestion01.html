@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style type="text/css">
+#pledgeText {
+  font-family: "Arial", "Helvetica", "sans-serif";
+  left: 30%;
+  right: 30%;
+  display: inline;
+  clear: both;
+  position: static;
+}
+
+#pledgeDescription {
+  left: 22%;
+  right: 22%;
+  position: fixed;
+  overflow: visible;
+  clear: both;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+#Header1 {
+  color: black;
+}
+
+#pledgeButton {
+  border-radius: 50px;
+  background-color: #00704a;
+  padding: 20px;
+  margin: auto;
+  opacity: 0.6;
+transition: all 0.3s ease 0s;
+  font-family: "Arial", "Helvetica", "sans-serif";
+  width: 100px;
+  
+  color: white;
+  font-weight: bold;
+}
+
+#pledgeButton:hover {
+  opacity: 1;
+}
+
+</style></head>
+  <body id="pledgeBody">
+    <title>Pledge</title>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-image: linear-gradient(#00704a, #005b3c);
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 24pt;
+  padding: 42px 36px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+.logo-img {
+  position: absolute;
+  left: 20px;
+  top: 27px;
+  margin: 0px;
+}
+
+#navBarList {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#pledgeBody {
+  color: black;
+  background-color: #a5acb0;
+}
+
+#Footer {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+      
+.boxDiv {
+  border: 0px solid black;
+  border-radius: 25px;
+  background-color: #f7f7f7;
+  text-align: center;
+  width: 30%;
+  padding: 30px;
+  margin: auto;
+}
+
+footer {
+  background-color: #00704a;
+  color: white;
+}
+
+</style> <div class="navigation" id="pledgeText"> <a href="SIOS.html"><img class="logo-img"
+
+          src="SIOSPage/SIOSHeader.png" alt="Logo" title="GGC Logo"></a>
+      <ul id="navBarList">
+        <li><a class="active" href="#profile">Profile</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="Pledge.html">Pledge</a></li>
+        <li><a href="GetInvolved.html">Get Involved</a></li>
+      </ul>
+      <h1 style="text-align: center;" id="Header1"><br>
+      </h1>
+      <!------------------------------------------------Question------------------------------------------------>
+      <br>
+      <div class="boxDiv">
+        <h2> <b>Water Flask:</b></h2>
+        <h4 style="text-align: center;" id="pledgeDescription">I will use a
+          water flask instead of a water bottle.</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form>
+          <div style="text-align: center;" id="pledgeButton"><span style="color: white;">
+              <input id="will" name="choice" value="will" type="radio"><label for="will">Will
+                do</label><br>
+            </span></div>
+          <br>
+          <div style="text-align: center;" id="pledgeButton"><span style="color: white;">
+              <input id="wont" name="choice" value="wont" type="radio"><label for="wont">Won't
+                do</label><br>
+            </span></div>
+          <br>
+          <div style="text-align: center;" id="pledgeButton"><span style="color: white;">
+              <input id="skip" name="choice" value="skip" type="radio"><label for="skip">Skip</label><br>
+            </span></div>
+          <br>
+        </form>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer id="Footer">© 2020 The Green Machine</footer>
+  </body>
+</html>
