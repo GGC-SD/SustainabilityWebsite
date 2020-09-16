@@ -53,50 +53,61 @@ li a:hover {
 #Header1 {
   font-family: "Arial", "Helvetica", "sans-serif";
 }
+
 footer {
-    background-color: #00704a;
-    color: white;
+  background-color: #00704a;
+  color: white;
+}
+
+#GetInvolvedBody {
+  background-color: #a5acb0;
+}
+
+#GetInvolvedHeader2 {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#GetInvolvedForm {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#Footer {
+  font-family: "Arial", "Helvetica", "sans-serif";
 }
 
 </style> </head>
-  <body>
-      <div id = "#HomeBody">
-          <header>
-            <div class="navigation" id="divNav"> <img class="logo-img" src="SIOSPage/SIOSHeader.png"
-
-                alt="Logo" title="GGC Logo">
-              <ul id="navBarList">
-                <li><a class="active" href="#profile">Profile</a></li>
-                <li><a href="News.html">News</a></li>
-                <li><a href="#pledge">Pledge</a></li>
-                <li><a href="#getinvolved">Get Involved</a></li>
-              </ul>
+  <body id="GetInvolvedBody">
+    <div id="#HomeBody">
+      <header>
+        <div class="navigation" id="divNav"> <a href="SIOS.html"><img class="logo-img"
+              src="SIOSPage/SIOSHeader.png" alt="Logo" title="GGC Logo"></a>
+          <ul id="navBarList">
+            <li><a class="active" href="#profile">Profile</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="#pledge">Pledge</a></li>
+            <li><a href="GetInvolved.html">Get Involved</a></li>
+          </ul>
+        </div>
+        <h2 style="text-align: center;" id="GetInvolvedHeader2">Get Involved</h2>
+      </header>
+      <div id="content">
+        <article id="form">
+          <form id="GetInvolvedForm">
+            <h3 style="margin-left: 40px;"> Join Events </h3>
+            <p style="margin-left: 40px;"> Enter info to join events: </p>
+            <div style="margin-left: 40px;"> </div>
+            <p style="margin-left: 40px;"> Name: <input name="name" size="15" maxlength="30"
+                type="text"> </p>
+            <div style="margin-left: 40px;"> </div>
+            <p style="margin-left: 40px;"> Email: <input name="email" size="15"
+                maxlength="50" type="email"> </p>
+            <div style="margin-left: 40px;"> <input value="Join" type="submit">
             </div>
-            <h2>Get Involved</h2>
-          </header>
-          <div id = "content">
-            <article id="form">
-                <form>
-                  <h3>
-                    Join Events
-                  </h3>
-                  <p>
-                    Enter info to join events:
-                  </p>
-                  <p>
-                    Name:
-                    <input type="text" name="name" size="15" maxlength="30">
-                  </p>
-                  <p>
-                    Email:
-                    <input type="email" name="email" size="15" maxlength="50">
-                  </p>
-                  <input type="submit" value="Join">
-                </form>
-            </article>    
-          </div>
-          <br>
-          <footer>&copy 2020 The Green Machine</footer>
+          </form>
+        </article>
       </div>
+      <br>
+      <footer id="Footer">© 2020 The Green Machine</footer>
+    </div>
   </body>
 </html>
