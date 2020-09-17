@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Progress Bar</title>
+    <script src="https://kit.fontawesome.com/cc773a3c4b.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+       font-family: "Arial", "Helvetica", "sans-serif";
+      }
+      
+      .progress {
+                margin: 300px auto;
+      }
+      
+    	.progress img {
+        width: 80px;
+        margin-bottom: 20px;
+      }
+      
+      ul {
+        text-align: center;
+      }
+      
+      ul li {
+       display: inline-block;
+        width: 200px;
+      }
+      
+      ul li .fa {
+        background: #ccc;
+        width: 16px;
+        height: 16px;
+        color: #fff;
+        border-radius: 50%;
+        padding: 5px;
+      }
+      
+      ul li .fa::after {
+        content: '';
+        background: #ccc;
+        height: 5px;
+        width: 200px;
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress">
+    <ul>
+      <li>
+        <img src="Images/water.png"><br>
+        <i class="fas fa-check"></i>
+        <p>Water</p>
+      </li>
+      <li>
+        <img src="Images/electricity.png"><br><br>
+        <i class="fas fa-sync"></i>
+        <p>Electricity</p>
+      </li>
+      <li>
+        <img src="Images/food.png"><br>
+        <i class="fas fa-times"></i>
+        <p>Food</p>
+      </li>
+    </ul>
+    </div>
+  </body>
+</html>
