@@ -39,7 +39,17 @@ li a:hover {
 #navBarList {
   font-family: "Arial", "Helvetica", "sans-serif";
 }
-
+#ProfileBox {
+  font-family: "Arial", "Helvetica", "sans-serif";
+  position: static;
+  background-color: #00704a;
+  clear: left;
+  display: block;
+  border: 10pt solid #00704a;
+  border-radius: 5px;
+  float: none;
+  visibility: visible;
+}
 #HomeBody {
   background-color: #a5acb0;
   border-top: 14px none #00704a;
@@ -79,8 +89,7 @@ footer {
   <body id="GetInvolvedBody">
     <div id="#HomeBody">
       <header>
-        <div class="navigation" id="divNav"> <a href="SIOS.html"><img class="logo-img"
-
+        <div class="navigation" id="divNav"> <a href="SIOS.html"><img class="logo-img"
               src="SIOSPage/SIOSHeader.png" alt="Logo" title="GGC Logo"></a>
           <ul id="navBarList">
             <li><a class="active" href="profile.html">Profile</a></li>
@@ -91,29 +100,29 @@ footer {
         </div>
         <h2 style="text-align: center;" id="GetInvolvedHeader2">Login</h2>
       </header>
-      <div id="content">
-        <article id="form">
-          <form id="GetInvolvedForm">
-            <h3 style="margin-left: 40px;">Log in to Sign the Pledge</h3>
-            <p style="margin-left: 40px;"> Enter your name and a valid GGC email
-              address </p>
-            <div style="margin-left: 40px;"> </div>
-            <p style="margin-left: 40px;"> Name: <input name="name" size="15" maxlength="30"
-
-                type="text"> </p>
-            <div style="margin-left: 40px;"> </div>
-            <p style="margin-left: 40px;"> Email: <input name="email" size="15"
-
-                maxlength="50" type="email"> </p>
-            <div style="margin-left: 40px;"> <a href="Pledge.html"> <input value="Login"
-
-type="button"> </a> </div>
-          </form>
-        </article>
+      <p> </p>
+      <div style="width:558px; margin:0 auto;">
+        <div id="ProfileBox" style="width: 558px; text-align: center;">
+          <div id="content">
+            <article id="form">
+              <form id="GetInvolvedForm">
+                <h3>Log in to Sign the Pledge</h3>
+                <p> Enter your name and a valid GGC email address </p>
+                <div style="margin-left: 40px;"> </div>
+                <p> Name: <input name="name" size="15" maxlength="30" type="text">
+                </p>
+                <div style="margin-left: 40px;"> </div>
+                <p> Email: <input name="email" size="15" maxlength="50" type="email">
+                </p>
+                <div style="margin-left: 120px;"> <a href="Pledge.html"> <input
+value="Login" type="button"> </a> </div>
+              </form>
+            </article>
+          </div>
+        </div>
       </div>
       <br>
       <footer id="Footer">© 2020 The Green Machine</footer>
     </div>
-    
   </body>
 </html>

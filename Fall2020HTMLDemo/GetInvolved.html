@@ -64,7 +64,7 @@ aside {
   width: 18%;
   padding-left: 15px;
   margin-left: 15px;
-  float: right;
+  float: none;
   font-style: italic;
   border-style: solid;
   border-radius: 15px;
@@ -73,6 +73,18 @@ aside {
 
 #GetInvolvedBody {
   background-color: #a5acb0;
+}
+
+#ProfileBox {
+  font-family: "Arial", "Helvetica", "sans-serif";
+  position: static;
+  background-color: #00704a;
+  clear: left;
+  display: block;
+  border: 10pt solid #00704a;
+  border-radius: 5px;
+  float: none;
+  visibility: visible;
 }
 
 #GetInvolvedHeader2 {
@@ -87,12 +99,17 @@ aside {
   font-family: "Arial", "Helvetica", "sans-serif";
 }
 
+#PresenceAside {
+  position: relative;
+  left: auto;
+  right: auto;
+}
+
 </style> </head>
   <body id="GetInvolvedBody">
     <div id="#HomeBody">
       <header>
-        <div class="navigation" id="divNav"> <a href="SIOS.html"><img class="logo-img"
-
+        <div class="navigation" id="divNav"> <a href="SIOS.html"><img class="logo-img"
               src="SIOSPage/SIOSHeader.png" alt="Logo" title="GGC Logo"></a>
           <ul id="navBarList">
             <li><a class="active" href="profile.html">Profile</a></li>
@@ -103,33 +120,33 @@ aside {
         </div>
         <h2 style="text-align: center;" id="GetInvolvedHeader2">Get Involved</h2>
       </header>
-      <div id="content">
-        <article id="form">
-          <aside>
-            <h4><u>Link to GGC Presence Page</u></h4>
-            <p>
-              Click <a href="https://ggc.presence.io/">here</a> to go there now.
-            </p>
-          </aside>
-          <form id="GetInvolvedForm">
-            <h3 style="margin-left: 40px;"> Join Events </h3>
-            <p style="margin-left: 40px;"> Enter info to join events: </p>
-            <div style="margin-left: 40px;"> </div>
-            <p style="margin-left: 40px;"> Name: <input name="name" size="15" maxlength="30"
-
-                type="text"> </p>
-            <div style="margin-left: 40px;"> </div>
-            <p style="margin-left: 40px;"> Email: <input name="email" size="15"
-
-                maxlength="50" type="email"> </p>
-            <div style="margin-left: 40px;"> <input value="Join" type="submit">
-            </div>
-          </form>
-        </article>
+      <div style="width:558px; margin:0 auto;">
+        <div id="ProfileBox" style="width: 558px; text-align: center;">
+          <div id="content">
+            <article id="form">
+              <form id="GetInvolvedForm">
+                <h3> Join Events </h3>
+                <p> Enter info to join events: </p>
+                <div style="margin-left: 40px;"> </div>
+                <p> Name: <input name="name" size="15" maxlength="30" type="text">
+                </p>
+                <div style="margin-left: 40px;"> </div>
+                <p> Email: <input name="email" size="15" maxlength="50" type="email">
+                </p>
+                <div style="margin-left: 120px;"> <input value="Join" type="submit">
+                </div>
+              </form>
+            </article>
+          </div>
+        </div>
       </div>
+      <aside id="PresenceAside">
+        <h4><u>Link to GGC Presence Page</u></h4>
+        <p> Click <a href="https://ggc.presence.io/">here</a> to go there now.
+        </p>
+      </aside>
       <br>
-      <footer id="Footer">ï¿½ 2020 The Green Machine</footer>
+      <footer id="Footer">© 2020 The Green Machine</footer>
     </div>
-    
   </body>
 </html>
