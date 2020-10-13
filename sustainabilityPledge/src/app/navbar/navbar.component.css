@@ -1,7 +1,6 @@
 ul {
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    padding-left: 682px;
     overflow: hidden;
     background-image: linear-gradient(#00704a, #005b3c);
   }
@@ -25,9 +24,11 @@ ul {
   
   .logo-img {
     position: absolute;
-    left: 20px;
-    top: 27px;
-    margin: 0px;
+    padding-left: 20px;
+    padding-top: 27px;
+    padding-bottom: auto;
+    
+    /* background-image: linear-gradient(#00704a, #005b3c); */
   }
   
   #navBarList {
