@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -20,25 +20,20 @@ constructor(private angularFireAuth: AngularFireAuth, private fireStore: Angular
 this.userData = angularFireAuth.authState;
 }
 
-async SignUp(
-  email: string,
-  password: string
-): Promise<firebase.auth.UserCredential> {
-  try{
-    const newUserCredential: firebase.auth.UserCredential = await this.angularFireAuth
-    .createUserWithEmailAndPassword(
-      email,
-      password
-    );
-    await this.fireStore
-    .doc(`userProfile/${newUserCredential.user.uid}`)
-    .set({ email });
-    await newUserCredential.user.sendEmailVerification();
+SendVerificationMail() {
+  return firebase.auth().currentUser.sendEmailVerification()
+  .then(() => {
+    this.router.navigate(['/home'])
+  })
+}
 
-    return newUserCredential;
-  }catch (error){
-    throw error;
-  }
+SignUp(email: string, password: string) {
+  return firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((result) => {
+    this.SendVerificationMail();
+  }).catch((error) => {
+    window.alert(error.message)
+  })
 }
 
 /* Sign up 
