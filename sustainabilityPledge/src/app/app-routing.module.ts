@@ -12,7 +12,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChooseUsernameComponent } from './choose-username/choose-username.component';
 import { ResultComponent } from './result/result.component';
 import { AuthGuard } from './auth.guard';
-import {FaqComponent} from './faq/faq.component'
+import {FaqComponent} from './faq/faq.component';
+import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
 
   {path: 'faq',component: FaqComponent},
   {path: 'about',component: LoginComponent},
+  {path: 'getinvolved', component: GetInvolvedComponent},
 
   {path: 'water', component: WaterComponent,
   canActivate: [AuthGuard]},
