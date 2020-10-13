@@ -30,6 +30,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { AuthGuard } from './auth.guard';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FaqComponent } from './faq/faq.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 //
 
@@ -48,7 +50,9 @@ import { FaqComponent } from './faq/faq.component';
     ResultComponent,
     TopBarComponent,
     ProgressBarComponent,
-    FaqComponent
+    FaqComponent,
+    NavbarComponent
+    
   ],
   imports: [
     BrowserModule,
