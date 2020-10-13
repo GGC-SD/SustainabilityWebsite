@@ -31,6 +31,7 @@ import { AuthGuard } from './auth.guard';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FaqComponent } from './faq/faq.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 
 
 //
@@ -51,7 +52,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     TopBarComponent,
     ProgressBarComponent,
     FaqComponent,
-    NavbarComponent
+    NavbarComponent,
+    GetInvolvedComponent
     
   ],
   imports: [
