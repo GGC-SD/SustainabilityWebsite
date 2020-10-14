@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { first } from 'rxjs/operators';
-import * as firebase from 'firebase/app';
-import 'firebase/firestore';
+import { ActivatedRoute, Router } from '@angular/router';
+import * as firebase from 'firebase';
+import { UserService } from '../user.service';
 
 // import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
@@ -16,37 +14,18 @@ providedIn: 'root'
 export class AuthenticationService {
 userData: Observable<firebase.User>;
 
-constructor(private angularFireAuth: AngularFireAuth, private fireStore: AngularFirestore, private router: Router) {
-this.userData = angularFireAuth.authState;
+constructor(private angularFireAuth: AngularFireAuth, private router: Router, private route: ActivatedRoute, private userService: UserService) {
+;this.userData = angularFireAuth.authState
 }
 
-async SignUp(
-  email: string,
-  password: string
-): Promise<firebase.auth.UserCredential> {
-  try{
-    const newUserCredential: firebase.auth.UserCredential = await this.angularFireAuth
-    .createUserWithEmailAndPassword(
-      email,
-      password
-    );
-    await this.fireStore
-    .doc(`userProfile/${newUserCredential.user.uid}`)
-    .set({ email });
-    await newUserCredential.user.sendEmailVerification();
 
-    return newUserCredential;
-  }catch (error){
-    throw error;
-  }
-}
-
-/* Sign up 
+/* Sign up */
 SignUp(email: string, password: string) {
 this.angularFireAuth
 
 .createUserWithEmailAndPassword(email, password)
 .then(res => {
+
 console.log('You are Successfully signed up!', res);
 this.router.navigate(['/home']);
 })
@@ -57,10 +36,9 @@ console.log('Something is wrong:', error.message);
 
 /* Sign in */
 SignIn(email: string, password: string) {
-
+let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl') || '/';
+localStorage.setItem('returnUrl', returnUrl);
 this.angularFireAuth
-
-
 .signInWithEmailAndPassword(email, password)
 .then(res => {
 console.log('You are Successfully logged in!');

@@ -5,6 +5,8 @@ import {AngularFireDatabase} from '@angular/fire/database';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Pledge } from './models/Pledge';
+import * as firebase from 'firebase/app';
+import 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,8 @@ export class QuestionService {
   progress: number = 0;
   answers: Pledge[] = [];
   data: Observable<any[]>;
-  totalQuestions: number = 22; //REPLACE WITH NEW TOTAL IF ADDED QUESTIONS TO JSON
+  totalQuestions: number = 22;//REPLACE WITH NEW TOTAL IF ADDED QUESTIONS TO JSON
+   
 
   constructor(
     private http: HttpClient,

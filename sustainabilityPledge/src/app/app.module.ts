@@ -32,6 +32,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FaqComponent } from './faq/faq.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {GetInvolvedComponent} from './get-involved/getinvolved.component';
+import { UserService } from './user.service';
 
 
 //
@@ -65,7 +66,9 @@ import {GetInvolvedComponent} from './get-involved/getinvolved.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [AuthenticationService,AuthGuard],
+  providers: [AuthenticationService,
+    AuthGuard,
+    UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
