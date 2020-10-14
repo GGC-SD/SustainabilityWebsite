@@ -1,3 +1,50 @@
 
 <app-navbar></app-navbar>
-<h1>Welcome to get involved</h1>
+<body>
+    <h1 style="text-align: center;" id="GetInvolvedHeader2">Get Involved</h1>
+    <p id="pintro">Looking forward to join future events complete the form below:</p>
+    <div style="width:558px; margin:0 auto;">
+        <div id="ProfileBox" style="width: 558px; text-align: center;">
+          <div id="content">
+            <article id="form">
+                <aside id="PresenceAside">
+                    <p><u>Link to GGC Presence Page</u></p>
+                    <p> Click <a href="https://ggc.presence.io/">here</a> to go there now.
+                    </p>
+                  </aside>
+              <form id="giform" action="/getinvolved" method="POST"> 
+                <h3> Join Events </h3>
+                <p> Enter info to join events: </p>
+                <div style="margin-left: 40px;"> </div>
+                <p> Name: <input name="name" size="15" maxlength="30" type="text">
+                </p>
+                <div style="margin-left: 40px;"> </div>
+                <p> Email: <input name="email" size="15" maxlength="50" type="email">
+                </p>
+                <p>Phone: <input name="phone" size="15" maxlength="15" type="text"></p>
+                <div style="margin-left: 120px;"> <input value="Join" type="submit">
+                </div>
+              </form>
+              <!--trying some js to make the form process something-->
+              <script>
+                function processForm(e) {
+                    if (e.preventDefault) e.preventDefault();
+
+                    alert('hi');
+                    return false;
+                }
+
+                var form = document.getElementById('giform');
+                if (form.attachEvent) {
+                form.attachEvent("submit", processForm);
+                } else {
+                form.addEventListener("submit", processForm);
+                }
+              </script>
+              
+            </article>
+            
+          </div>
+        </div>
+      </div>
+</body>
