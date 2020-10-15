@@ -16,13 +16,13 @@
                 <h3> Join Events </h3>
                 <p> Enter info to join events: </p>
                 <div style="margin-left: 40px;"> </div>
-                <p> Name: <input name="name" size="15" maxlength="30" type="text">
+                <p> Name: <input [(ngModel)]="name" id="name"size="15" maxlength="30" type="text">
                 </p>
                 <div style="margin-left: 40px;"> </div>
-                <p> Email: <input name="email" size="15" maxlength="50" type="email">
+                <p> Email: <input  [(ngModel)]="email"  id="email" size="15" maxlength="50" type="email">
                 </p>
-                <p>Phone: <input name="phone" size="15" maxlength="15" type="text"></p>
-                <div style="margin-left: 120px;"> <input value="Join" type="submit">
+                <p>Phone: <input [(ngModel)]="phone" size="15" maxlength="15" type="text"></p>
+                <div style="margin-left: 120px;"><button (click)="saveInfo()" id="join" class="btn btn-outline-info mr-1"   style="margin-left:5px;">Join</button>
                 </div>
               </form>
               <!--trying some js to make the form process something-->

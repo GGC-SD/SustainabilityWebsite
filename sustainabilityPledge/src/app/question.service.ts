@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Pledge } from './models/Pledge';
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -49,7 +50,8 @@ export class QuestionService {
       return;
     }else{
       this.db.list('Pledges').push({
-        pledge: this.answers
+        pledge: this.answers,
+        user:  firebase.auth().currentUser.uid
       })
       .then(function(docRef) {
         console.log(docRef);

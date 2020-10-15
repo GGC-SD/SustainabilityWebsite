@@ -1,12 +1,10 @@
 export class getInvolvedUser{
-    firstName: string;
-    lastName: string;
+    name: string;
     phone: string;
     emailAddress: string;
 
-    constructor(fn: string, ln: string, p:string, ea: string){
-        this.firstName = fn;
-        this.lastName = ln;
+    constructor(n:string, p:string, ea: string){
+        this.name= n;
         this.phone = p;
         this.emailAddress = ea;
     }
