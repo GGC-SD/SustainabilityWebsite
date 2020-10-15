@@ -17,37 +17,39 @@ public class SiteTest {
         driver = new ChromeDriver();
     }
 
-    @Ignore
+//    @Ignore
     @Test
     public void testNavBar() throws InterruptedException {
         // Test new nav bar links
         driver.get("localhost:4200/home");
+        Thread.sleep(500);
         Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:4200/home");
         Thread.sleep(3000);
         driver.findElement(By.linkText("Get Involved")).click();
+        Thread.sleep(500);
         Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:4200/getinvolved");
         Thread.sleep(3000);
         driver.findElement(By.linkText("FAQ")).click();
+        Thread.sleep(500);
         Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:4200/faq");
         Thread.sleep(3000);
         driver.findElement(By.linkText("About Us")).click();
-        Thread.sleep(3000);
+        Thread.sleep(500);
         Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:4200/about");
         driver.findElement(By.className("logo-img")).click();
         Thread.sleep(3000);
         driver.findElement(By.linkText("Pledge")).click();
+        Thread.sleep(500);
         Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:4200/login");
         Thread.sleep(3000);
-        driver.close();
+//        driver.close();
     }
 
     /**
-     * Tests presence link on navigation
+     * Tests GetInvolved info submission and test GGC presence link
      * @throws InterruptedException
      */
-
-
-    @Ignore
+//    @Ignore
     @Test
     public void testGetInvolved() throws InterruptedException {
         driver.get("localhost:4200/getinvolved");
@@ -65,14 +67,17 @@ public class SiteTest {
 
         // Test presence link on GGC page
         driver.findElement(By.linkText("here")).click();
+        Thread.sleep(3000);
         Assert.assertEquals(driver.getCurrentUrl(), "https://ggc.presence.io/");
-
+        Thread.sleep(3000);
+//        driver.close();
     }
 
     /**
      * Tests Sign Up function on pledge login page
      * @throws InterruptedException
      */
+//    @Ignore
     @Test
     public void testSignUp() throws InterruptedException {
         driver.get("localhost:4200/login");
@@ -84,6 +89,7 @@ public class SiteTest {
         int targetStringLength = 10;
         Random random = new Random();
 
+        // Generate random string to concatenate to GGC email address to ensure new user
         String generatedString = random.ints(leftLimit, rightLimit + 1)
                 .limit(targetStringLength)
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
@@ -96,11 +102,13 @@ public class SiteTest {
         Thread.sleep(3000);
 
         driver.findElement(By.id("signUp")).click();
-        Thread.sleep(350);
+        Thread.sleep(1000);
         driver.findElement(By.linkText("Pledge")).click();
         Thread.sleep(1000);
-        Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:4200/water");
 
+        // User should not be able to reach water page unless logged in
+        Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:4200/water");
+//        driver.close();
     }
 
 
