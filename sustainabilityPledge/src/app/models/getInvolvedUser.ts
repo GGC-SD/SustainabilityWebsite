@@ -1,4 +1,4 @@
-export class getInvolvedUser{
+export class GetInvolvedUser{
     name: string;
     phone: string;
     emailAddress: string;

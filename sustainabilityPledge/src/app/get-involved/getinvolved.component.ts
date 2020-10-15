@@ -10,7 +10,6 @@ export class GetInvolvedComponent implements OnInit {
     constructor(
         public getInvolvedService: GetInvolvedServiceService
     ) {
-
     }
 
     name: string;
