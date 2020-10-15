@@ -11,10 +11,21 @@ input.ng-invalid.ng-dirty{
   background-color: #00704A;
 }
 
-
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  background-color: #00704A; 
+  color: white;
+}
 #bigButton{
   height: 100px;
   font-size: 50px;
+}
+.body{
+  margin:0;
 }
 
 
