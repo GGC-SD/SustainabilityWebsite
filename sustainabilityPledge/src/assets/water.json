@@ -3,32 +3,32 @@
         "category": "water",
         "title": "Water Flask",
         "question": "I will use a reusable water bottle/flask instead of purchasing disposable water bottles",
-        "yesOption": "Pledge",
-        "noOption": "Do not Pledge",
-        "doOption": "Already Pledged"
+        "yesOption": "I Will Do This",
+        "noOption": "Skip",
+        "doOption": "I Already Do This"
     },
     {
         "category": "water",
         "title": "Turn Off Faucet",
         "question": "I will turn off the water faucet while I am brushing my teeth or showering",
-        "yesOption": "Pledge",
-        "noOption": "Do not Pledge",
-        "doOption": "Already Pledged"
+        "yesOption": "I Will Do This",
+        "noOption": "Skip",
+        "doOption": "I Already Do This"
     },
     {
-      "category": "water",
-      "title": "Laundry",
-      "question": "I will do laundry once a week and with cold water",
-      "yesOption": "Pledge",
-      "noOption": "Do not Pledge",
-      "doOption": "Already Pledged"
-  },
-  {
-    "category": "water",
-    "title": "Showers",
-    "question": "I will take a faster shower and turn off water when soaping",
-    "yesOption": "Pledge",
-    "noOption": "Do not Pledge",
-    "doOption": "Already Pledged"
-}
+        "category": "water",
+        "title": "Laundry",
+        "question": "I will do laundry once a week and with cold water",
+        "yesOption": "I Will Do This",
+        "noOption": "Skip",
+        "doOption": "I Already Do This"
+    },
+    {
+        "category": "water",
+        "title": "Showers",
+        "question": "I will take a faster shower and turn off water when soaping",
+        "yesOption": "I Will Do This",
+        "noOption": "Skip",
+        "doOption": "I Already Do This"
+    }
 ]

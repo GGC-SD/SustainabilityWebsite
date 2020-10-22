@@ -1,34 +1,34 @@
 [
   {
-      "category": "electricity",
-      "title": "Computer Sleep Mode",
-      "question": "I will put my computer on sleep mode when I am not using it to save battery",
-      "yesOption": "Pledge",
-      "noOption": "Do not Pledge",
-      "doOption": "Already Pledged"
+    "category": "electricity",
+    "title": "Computer Sleep Mode",
+    "question": "I will put my computer on sleep mode when I am not using it to save battery",
+    "yesOption": "I Will Do This",
+    "noOption": "Skip",
+    "doOption": "I Already Do This"
   },
   {
-      "category": "electricity",
-      "title": "Unplug Outlets",
-      "question": "I will unplug outlet when they are not in use to conserve energy",
-      "yesOption": "Pledge",
-      "noOption": "Do not Pledge",
-      "doOption": "Already Pledged"
+    "category": "electricity",
+    "title": "Unplug Outlets",
+    "question": "I will unplug outlet when they are not in use to conserve energy",
+    "yesOption": "I Will Do This",
+    "noOption": "Skip",
+    "doOption": "I Already Do This"
   },
   {
     "category": "electricity",
     "title": "Turn Off Appliances",
     "question": "I will turn off appliances when I am not using them",
-    "yesOption": "Pledge",
-    "noOption": "Do not Pledge",
-    "doOption": "Already Pledged"
-},
-{
-  "category": "electricity",
-  "title": "Using Fan",
-  "question": "I will use a fan instead of the air conditioner",
-  "yesOption": "Pledge",
-  "noOption": "Do not Pledge",
-  "doOption": "Already Pledged"
-}
+    "yesOption": "I Will Do This",
+    "noOption": "Skip",
+    "doOption": "I Already Do This"
+  },
+  {
+    "category": "electricity",
+    "title": "Using Fan",
+    "question": "I will use a fan instead of the air conditioner",
+    "yesOption": "I Will Do This",
+    "noOption": "Skip",
+    "doOption": "I Already Do This"
+  }
 ]

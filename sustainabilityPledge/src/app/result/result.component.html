@@ -8,9 +8,10 @@
     <p style="color: green; font-size: 1.2em;">You answered: {{question.answer}}</p>
     <p style="font-size: 1.2em;">How others answered:</p>
   <div>
-    <span style="color: blue; font-size: 1.2em;">Pledged: {{getPCount(question.question)}}</span>&nbsp;&nbsp;
-    <span style="color: red; font-size: 1.2em;">Do not Pledge: {{getDPCount(question.question)}}</span>&nbsp;&nbsp;
-    <span style="color: orange; font-size: 1.2em;">Already Pledged: {{getAPCount(question.question)}}</span>
+    <span style="color: blue; font-size: 1.2em;">Will Do This: {{getPCount(question.question)}}</span>&nbsp;&nbsp;
+    <span style="color: orange; font-size: 1.2em;">Already Do This: {{getAPCount(question.question)}}</span>&nbsp;&nbsp;
+    <span style="color: red; font-size: 1.2em;">Skipped: {{getDPCount(question.question)}}</span>&nbsp;&nbsp;
+    
 
   </div>
 </div>

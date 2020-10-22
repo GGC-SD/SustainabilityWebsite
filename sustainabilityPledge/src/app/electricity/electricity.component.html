@@ -8,13 +8,14 @@
       <input type="radio" id="{{question.yesOption}}{{indexOfElement}}" value="{{question.yesOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
       <label for="{{question.yesOption}}{{indexOfElement}}">{{question.yesOption}}</label>
     </div>
-    <div>
-      <input type="radio" id="{{question.noOption}}{{indexOfElement}}" value="{{question.noOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
-      <label for="{{question.noOption}}{{indexOfElement}}">{{question.noOption}}</label>
-    </div>
+    
     <div>
       <input type="radio" id="{{question.doOption}}{{indexOfElement}}" value="{{question.doOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
       <label for="{{question.doOption}}{{indexOfElement}}">{{question.doOption}}</label>
+    </div>
+    <div>
+      <input type="radio" id="{{question.noOption}}{{indexOfElement}}" value="{{question.noOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
+      <label for="{{question.noOption}}{{indexOfElement}}">{{question.noOption}}</label>
     </div>
   </section>
 </div>
