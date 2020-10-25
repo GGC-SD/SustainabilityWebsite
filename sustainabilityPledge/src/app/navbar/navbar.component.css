@@ -1,11 +1,12 @@
-ul {
-    list-style-type: none;
-    padding-left: 800px;
+/* ul {
+
+    padding-left: 0;
+
     overflow: hidden;
 
     background-image: linear-gradient(#00704a, #005b3c);
-  }
-  
+  } */
+  /* 
   li {
     float: right;
   }
@@ -29,7 +30,7 @@ ul {
     padding-top: 27px;
     padding-bottom: auto;
     
-    /* background-image: linear-gradient(#00704a, #005b3c); */
+     background-image: linear-gradient(#00704a, #005b3c);
   }
   
   #navBarList {
@@ -44,4 +45,4 @@ ul {
   #divNav {
     border-top-width: 5px;
     border-top-style: none;
-  }
+  } */
