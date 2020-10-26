@@ -1,14 +1,13 @@
 <app-navbar></app-navbar>
 
-    <nav class="navbar navbar-expand nav flex-column sticky-top " id="navBar">
+    <nav class="navbar navbar-expand nav flex-column sticky-top justify-content-center" id="navBar">
 
-      <div>
-        <a class="btn btn-success mr-2 green" id="waterTop" routerLink="/water" > Water <i class="fas fa-hand-holding-water"></i></a>
-        <a class="btn btn-success mr-2 green" id="electricityTop" routerLink="/electricity" >Electricity <i class="fas fa-bolt"></i></a>
-        <a class="btn btn-success mr-2 green" id="foodTop" routerLink="/food" >Food <i class="fa fa-utensils"></i></a>
-        <a class="btn btn-success mr-2 green" id="recyclingTop" routerLink="/recycling" >Recycling <i class="fa fa-recycle"></i></a>
-        <a class="btn btn-success mr-2 green" id="transportationTop" routerLink="/transportation" >Transportation <i class="fa fa-car-side"></i></a>
-        <a class="btn btn-danger" id="transportationTop" routerLink="/login" >Log Out</a>
+      <div class="d-flex flex-wrap justify-content-around align-content-around">
+        <a class="btn btn-success m-1 flex-grow-1 green" routerLink="/water" > Water <i class="fas fa-hand-holding-water"></i></a>
+        <a class="btn btn-success m-1 flex-grow-1 green" routerLink="/electricity" >Electricity <i class="fas fa-bolt"></i></a>
+        <a class="btn btn-success m-1 flex-grow-1 green" routerLink="/food" >Food <i class="fa fa-utensils"></i></a>
+        <a class="btn btn-success m-1 flex-grow-1 green" routerLink="/recycling" >Recycling <i class="fa fa-recycle"></i></a>
+        <a class="btn btn-success m-1 flex-grow-1 green" routerLink="/transportation" >Transportation <i class="fa fa-car-side"></i></a>
       </div>
 
     </nav>
