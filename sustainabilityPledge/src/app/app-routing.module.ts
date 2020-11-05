@@ -14,6 +14,7 @@ import { ResultComponent } from './result/result.component';
 import { AuthGuard } from './auth.guard';
 import {FaqComponent} from './faq/faq.component';
 import {GetInvolvedComponent} from './get-involved/getinvolved.component';
+import {NewsComponent} from './news/news.component';
 
 
 
@@ -27,6 +28,7 @@ export const routes: Routes = [
   {path: 'faq',component: FaqComponent},
   {path: 'about',component: LoginComponent},
   {path: 'getinvolved', component: GetInvolvedComponent},
+  {path: 'news',component: NewsComponent},
 
   {path: 'water', component: WaterComponent,
   canActivate: [AuthGuard]},
