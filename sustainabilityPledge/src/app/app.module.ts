@@ -32,6 +32,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FaqComponent } from './faq/faq.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {GetInvolvedComponent} from './get-involved/getinvolved.component';
+import { NewsComponent } from './news/news.component';
 import { UserService } from './user.service';
 
 
@@ -54,7 +55,8 @@ import { UserService } from './user.service';
     ProgressBarComponent,
     FaqComponent,
     NavbarComponent,
-    GetInvolvedComponent
+    GetInvolvedComponent,
+    NewsComponent
     
   ],
   imports: [
