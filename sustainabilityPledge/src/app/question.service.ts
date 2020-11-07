@@ -51,7 +51,8 @@ export class QuestionService {
     }else{
       this.db.list('Pledges').push({
         pledge: this.answers,
-        user:  firebase.auth().currentUser.uid
+        user:  firebase.auth().currentUser.uid,
+        dateTaken : firebase.firestore.FieldValue.serverTimestamp()
       })
       .then(function(docRef) {
         console.log(docRef);

@@ -25,22 +25,6 @@
                 <div style="margin-left: 120px;"><button (click)="saveInfo()" id="join" class="btn btn-outline-info mr-1"   style="margin-left:5px;">Join</button>
                 </div>
               </form>
-              <!--trying some js to make the form process something-->
-              <script>
-                function processForm(e) {
-                    if (e.preventDefault) e.preventDefault();
-
-                    alert('hi');
-                    return false;
-                }
-
-                var form = document.getElementById('giform');
-                if (form.attachEvent) {
-                form.attachEvent("submit", processForm);
-                } else {
-                form.addEventListener("submit", processForm);
-                }
-              </script>
               
             </article>
             
