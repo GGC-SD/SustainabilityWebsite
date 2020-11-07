@@ -34,6 +34,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 import { NewsComponent } from './news/news.component';
 import { UserService } from './user.service';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 
 //
@@ -56,7 +57,8 @@ import { UserService } from './user.service';
     FaqComponent,
     NavbarComponent,
     GetInvolvedComponent,
-    NewsComponent
+    NewsComponent,
+    SignupFormComponent
     
   ],
   imports: [

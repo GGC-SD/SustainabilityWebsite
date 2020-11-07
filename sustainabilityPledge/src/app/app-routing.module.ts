@@ -15,6 +15,7 @@ import { AuthGuard } from './auth.guard';
 import {FaqComponent} from './faq/faq.component';
 import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 import {NewsComponent} from './news/news.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 
 
@@ -44,7 +45,8 @@ export const routes: Routes = [
   {path: 'login',component: ChooseUsernameComponent
 },
 {path: 'result', component: ResultComponent,
-canActivate: [AuthGuard]}
+canActivate: [AuthGuard]},
+{path: 'signUpForm', component: SignupFormComponent}
 
 ];
 

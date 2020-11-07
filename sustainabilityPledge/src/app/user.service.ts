@@ -11,7 +11,10 @@ export class UserService {
 
   save(user: firebase.User){
     this.db.object('/Users/' + user.uid).update({
-      email:user.email
+      fullName: user.displayName,
+      phone: user.phoneNumber,
+      email:user.email,
+      isEmailVerified: user.emailVerified
     });
   }
 
