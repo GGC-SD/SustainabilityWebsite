@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+  <div class="row" id="center">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="form-group">
+          <label style=" font-size: 30px;" for="email">Email address: </label>
+          <input type="text" class="form-control" [(ngModel)]="email" id="email"
+            placeholder="Valid email format required" required [pattern]="emailPattern">
+        </div>
+        <div class="form-group">
+          <label style=" font-size: 30px;" for="pwd">Password:</label>
+          <input type="password" class="form-control" [(ngModel)]="password" id="pwd"
+            placeholder="Must be 8 characters long" required [pattern]="passwordPattern">
+        </div>
+        <div class="form-group">
+          <label style=" font-size: 30px;" for="firstName">First Name: </label>
+          <input type="text" class="form-control" [(ngModel)]="firstName" id="firstName"
+            placeholder="Enter First Name" required>
+        </div>
+        <div class="form-group">
+          <label style=" font-size: 30px;" for="lastName">Last Name: </label>
+          <input type="text" class="form-control" [(ngModel)]="lastName" id="lastName"
+            placeholder="Enter Last Name" required>
+        </div>
+        <div class="form-group">
+          <label style=" font-size: 30px;" for="phone">Phone Number: </label>
+          <input type="text" class="form-control" [(ngModel)]="phone" id="phone"
+            placeholder="(770)777-7070" required>
+        </div>
+        
+        <button (click)= "signUp()" id="signUp" class="btn btn-outline-success">Sign Up</button>
+      </div>
+
+    </div>
+  </div>
