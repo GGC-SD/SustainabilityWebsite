@@ -17,20 +17,22 @@ import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 import {NewsComponent} from './news/news.component';
 import {ProfileComponent} from './profile/profile.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 
 
 export const routes: Routes = [
 
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent,
-  // canActivate: [AuthGuard]
- },
+  {path: 'home', component: HomeComponent },
   {path: 'faq',component: FaqComponent},
   {path: 'about',component: LoginComponent},
   {path: 'getinvolved', component: GetInvolvedComponent},
   {path: 'news',component: NewsComponent},
   {path: 'profile',component: ProfileComponent},
+  {path: 'verifyEmailPage', component: VerifyEmailComponent},
+  {path: 'signUpForm', component: SignupFormComponent},
+  {path: 'login',component: ChooseUsernameComponent},
 
   {path: 'water', component: WaterComponent,
   canActivate: [AuthGuard]},
@@ -40,14 +42,11 @@ export const routes: Routes = [
   canActivate: [AuthGuard]},
   {path: 'recycling', component: RecyclingComponent,
   canActivate: [AuthGuard]},
-
   {path: 'transportation', component: TransportationComponent,
-  canActivate: [AuthGuard]},
-  {path: 'login',component: ChooseUsernameComponent
-},
-{path: 'result', component: ResultComponent,
-canActivate: [AuthGuard]},
-{path: 'signUpForm', component: SignupFormComponent}
+   canActivate: [AuthGuard]},
+  {path: 'result', component: ResultComponent,
+   canActivate: [AuthGuard]},
+  
 
 ];
 

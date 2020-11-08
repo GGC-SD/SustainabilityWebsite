@@ -33,7 +33,7 @@ export class AuthenticationService {
             .then(res => {
 
                 console.log('You are Successfully signed up!', res);
-                this.router.navigate(['/home']);
+                
             })
             .catch(error => {
                 console.log('Something is wrong:', error.message);
@@ -65,6 +65,17 @@ export class AuthenticationService {
         this.angularFireAuth
         .signOut();
     }
+
+    ResendEmailVerfication(){
+        this.angularFireAuth
+        .currentUser.then(u => u.sendEmailVerification())
+            .then(() => {
+                console.log('Please verify your email');
+                alert('Please verify your email');
+            }).catch((error) => {
+                console.log('Error: ' + error);
+            });
+        }
 
     UpdateUserData(firstName: String, lastName: String, phone: string) {
         // Sets user data to firestore on login

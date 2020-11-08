@@ -36,6 +36,7 @@ import { NewsComponent } from './news/news.component';
 import { UserService } from './user.service';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { ProfileComponent } from './profile/profile.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 
 //
@@ -60,7 +61,8 @@ import { ProfileComponent } from './profile/profile.component';
     GetInvolvedComponent,
     NewsComponent,
     SignupFormComponent,
-    ProfileComponent
+    ProfileComponent,
+    VerifyEmailComponent
     
   ],
   imports: [
