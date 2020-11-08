@@ -15,6 +15,7 @@ import { AuthGuard } from './auth.guard';
 import {FaqComponent} from './faq/faq.component';
 import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 import {NewsComponent} from './news/news.component';
+import {ProfileComponent} from './profile/profile.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 
 
@@ -25,11 +26,11 @@ export const routes: Routes = [
   {path: 'home', component: HomeComponent,
   // canActivate: [AuthGuard]
  },
-
   {path: 'faq',component: FaqComponent},
   {path: 'about',component: LoginComponent},
   {path: 'getinvolved', component: GetInvolvedComponent},
   {path: 'news',component: NewsComponent},
+  {path: 'profile',component: ProfileComponent},
 
   {path: 'water', component: WaterComponent,
   canActivate: [AuthGuard]},

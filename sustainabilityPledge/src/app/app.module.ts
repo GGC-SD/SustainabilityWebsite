@@ -35,6 +35,7 @@ import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 import { NewsComponent } from './news/news.component';
 import { UserService } from './user.service';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 //
@@ -58,7 +59,8 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     NavbarComponent,
     GetInvolvedComponent,
     NewsComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    ProfileComponent
     
   ],
   imports: [
