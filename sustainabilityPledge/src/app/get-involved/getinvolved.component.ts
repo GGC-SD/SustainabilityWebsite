@@ -18,7 +18,8 @@ export class GetInvolvedComponent implements OnInit {
 
 
     saveInfo(){
-        this.getInvolvedService.saveInfo(this.name,this.email, this.phone);
+        console.log(this.name + " " + this.email +' ' + this.phone)
+        //this.getInvolvedService.saveInfo(this.name,this.email, this.phone);
         this.name = '';
         this.email = '';
         this.phone = '';

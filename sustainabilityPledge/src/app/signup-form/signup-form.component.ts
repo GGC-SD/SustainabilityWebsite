@@ -18,15 +18,9 @@ export class SignupFormComponent implements OnInit {
   password: string;
   
   signUp() {
-    this.authenticationService.SignUp(this.email, this.password);
+    this.authenticationService.SignUp(this.email, this.password, this.firstName, this.lastName);
     this.email = '';
     this.password = '';
-  }
-
-
-
-  updateUser(){
-    this.authenticationService.UpdateUserData( this.firstName, this.lastName, this.phone)
     this.firstName = '';
     this.lastName = '';
     this.phone = '';

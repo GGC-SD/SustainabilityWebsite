@@ -21,9 +21,10 @@ export class AuthenticationService {
 
 
     /* Sign up */
-    SignUp(email: string, password: string) {
+    SignUp(email: string, password: string, firstName: String, lastName) {
+        var fullName = firstName + ' ' + lastName;
         this.angularFireAuth
-            .createUserWithEmailAndPassword(email, password).then(() => this.angularFireAuth.currentUser.then(u => u.sendEmailVerification())
+            .createUserWithEmailAndPassword(email, password).then(() => this.angularFireAuth.currentUser.then(u => u.sendEmailVerification()).then(() => this.angularFireAuth.currentUser.then(u => u.updateProfile({displayName: fullName, photoURL: "" }))
                 .then(() => {
                     console.log('Please verify your email');
                     alert('Please verify your email');
@@ -37,7 +38,8 @@ export class AuthenticationService {
             })
             .catch(error => {
                 console.log('Something is wrong:', error.message);
-            });
+            }));
+            
             
     }
 
@@ -51,7 +53,7 @@ export class AuthenticationService {
             .signInWithEmailAndPassword(email, password)
             .then(res => {
                 console.log('You are Successfully logged in!');
-                this.router.navigate(['/home']);
+                //this.router.navigate(['/home']);
             }
             )
             .catch(err => {
@@ -77,12 +79,7 @@ export class AuthenticationService {
             });
         }
 
-    UpdateUserData(firstName: String, lastName: String, phone: string) {
-        // Sets user data to firestore on login
-        // const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
-        firebase.auth().currentUser.displayName =  firstName + ' ' + lastName;
-        firebase.auth().currentUser.phoneNumber = phone;
-        }
+    
     }
 
 

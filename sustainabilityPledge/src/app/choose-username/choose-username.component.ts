@@ -21,11 +21,6 @@ export class ChooseUsernameComponent implements OnInit {
     email: string;
     password: string;
      
-    signUp() {
-    this.authenticationService.SignUp(this.email, this.password);
-    this.email = '';
-    this.password = '';
-    }
      
     signIn() {
       

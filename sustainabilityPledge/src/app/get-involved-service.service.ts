@@ -14,10 +14,10 @@ export class GetInvolvedServiceService {
   name: string;
   email: string;
   phone: string;
-  data: Observable<any[]>;
+  
 
   constructor(private router: Router,private db: AngularFireDatabase) {
-    this.data = this.db.list('InterestedInEvents').valueChanges();
+    
    }
 
   saveInfo(name: string, email: string, phone:string){
