@@ -7,14 +7,9 @@
         <div id="ProfileBox" style="width: 558px; text-align: center;">
           <div id="content">
             <article id="form">
-                <aside id="PresenceAside">
-                    <p><u>Link to GGC Presence Page</u></p>
-                    <p> Click <a href="https://ggc.presence.io/">here</a> to go there now.
-                    </p>
-                  </aside>
               <form id="giform" action="/getinvolved" method="POST"> 
                 <h3> Join Events </h3>
-                <p> Enter info to join events: </p>
+                <p style="text-decoration: underline;"> Enter info to join events: </p>
                 <div style="margin-left: 40px;"> </div>
                 <p> Name: <input [(ngModel)]="name" id="name"size="15" maxlength="30" type="text">
                 </p>
@@ -25,6 +20,12 @@
                 <div style="margin-left: 120px;"><button (click)="saveInfo()" id="join" class="btn btn-outline-info mr-1"   style="margin-left:5px;">Join</button>
                 </div>
               </form>
+              <br>
+              <div id="PresenceAside">
+                <p style="font-weight: bold;"><u>Link to GGC Presence Page</u></p>
+                <p> Click <a href="https://ggc.presence.io/">here</a> to go there now.
+                </p>
+              </div>
               
             </article>
             

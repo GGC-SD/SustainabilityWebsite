@@ -1,15 +1,3 @@
-aside {
-    display: block;
-    width: 18%;
-    padding-right: 15px;
-    margin-right: 15px;
-    float: right;
-    font-style: italic;
-    border-style: solid;
-    border-radius: 15px;
-    border-color: #00704a;
-  }
-
   h1 {
     font-family: "Arial", "Helvetica", "sans-serif";
     font-weight: bold;
@@ -22,4 +10,11 @@ aside {
   
   #GetInvolvedBody {
     background-color: #a5acb0;
+  }
+  #PresenceAside {
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    margin: auto;
   }
