@@ -11,7 +11,7 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
   constructor(private userService: UserService,private auth: AuthenticationService, router : Router){
-    auth.userData.subscribe(user => {
+    auth.user$.subscribe(user => {
       if(user){
         userService.save(user);
         let returnUrl = localStorage.getItem('returnUrl');

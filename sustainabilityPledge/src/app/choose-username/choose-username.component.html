@@ -4,13 +4,13 @@
 
   <div class="row" id="center">
     <div class="col-md-6 col-md-offset-3">
-      <h1 *ngIf="authenticationService && authenticationService.userData | async"
+      <h1 *ngIf="authenticationService && authenticationService.user$ | async"
         style="color: rgb(226, 6, 6); font-size: 90px;">
         Log-Out</h1>
-      <h1 *ngIf="authenticationService && authenticationService.userData | async">Are you sure you want to log out?
-        {{ (authenticationService.userData | async)?.email }}</h1>
+      <h1 *ngIf="authenticationService && authenticationService.user$ | async">Are you sure you want to log out?
+        {{ (authenticationService.user$ | async)?.email }}</h1>
 
-      <div *ngIf="!(authenticationService.userData | async)">
+      <div *ngIf="!(authenticationService.user$ | async)">
         <div class="form-group">
           <label style=" font-size: 30px;" for="email">Email address: </label>
           <input type="text" class="form-control" [(ngModel)]="email" id="email"
@@ -26,9 +26,9 @@
         <button routerLink="/signUpForm" id="signUp" class="btn btn-outline-success">Sign Up</button>
       </div>
       <button (click)="signOut()" class="btn btn-outline-danger mr-1"
-        *ngIf="authenticationService.userData | async">Yes!</button>
+        *ngIf="authenticationService.user$ | async">Yes!</button>
       <button class="btn btn-outline-success" routerLink="/"
-        *ngIf="authenticationService.userData | async">Home</button>
+        *ngIf="authenticationService.user$ | async">Home</button>
 
     </div>
   </div>

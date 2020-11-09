@@ -13,10 +13,10 @@ import { last } from 'rxjs/operators';
 })
 
 export class AuthenticationService {
-    userData: Observable<firebase.User>;
+    user$: Observable<firebase.User>;
 
     constructor(private angularFireAuth: AngularFireAuth, private router: Router, private route: ActivatedRoute, private userService: UserService) {
-        ; this.userData = angularFireAuth.authState
+        ; this.user$ = angularFireAuth.authState
     }
 
 

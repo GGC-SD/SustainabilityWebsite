@@ -37,6 +37,8 @@ import { UserService } from './user.service';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { ProfileComponent } from './profile/profile.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { AdminAuthGuard } from './admin-auth-guard.service';
+import { AdminComponent } from './admin/admin.component';
 
 
 //
@@ -62,7 +64,8 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
     NewsComponent,
     SignupFormComponent,
     ProfileComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    AdminComponent
     
   ],
   imports: [
@@ -76,6 +79,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
   ],
   providers: [AuthenticationService,
     AuthGuard,
+    AdminAuthGuard,
     UserService],
   bootstrap: [AppComponent]
 })

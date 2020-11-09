@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 import * as firebase from 'firebase'
+import { Observable } from 'rxjs';
+import { AppUser } from './models/app-user';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +14,14 @@ export class UserService {
   save(user: firebase.User){
     this.db.object('/Users/' + user.uid).update({
       fullName: user.displayName,
-      phone: user.phoneNumber,
       email:user.email,
-      isEmailVerified: user.emailVerified
+      isEmailVerified: user.emailVerified,
+      isAdmin: false
     });
+  }
+
+  get(uid: String): Observable<AppUser> {
+    return this.db.object<AppUser>('/Users/' + uid).valueChanges();
   }
 
   

@@ -18,6 +18,8 @@ import {NewsComponent} from './news/news.component';
 import {ProfileComponent} from './profile/profile.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { AdminAuthGuard } from './admin-auth-guard.service';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -46,6 +48,8 @@ export const routes: Routes = [
    canActivate: [AuthGuard]},
   {path: 'result', component: ResultComponent,
    canActivate: [AuthGuard]},
+  {path: 'admin', component: AdminComponent,
+   canActivate: [AdminAuthGuard]}
   
 
 ];
