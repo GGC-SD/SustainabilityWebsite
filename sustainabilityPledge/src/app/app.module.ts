@@ -33,6 +33,7 @@ import { FaqComponent } from './faq/faq.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 import { NewsComponent } from './news/news.component';
+import { EventsComponent } from './events/events.component';
 import { UserService } from './user.service';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -60,6 +61,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
     NavbarComponent,
     GetInvolvedComponent,
     NewsComponent,
+    EventsComponent,
     SignupFormComponent,
     ProfileComponent,
     VerifyEmailComponent

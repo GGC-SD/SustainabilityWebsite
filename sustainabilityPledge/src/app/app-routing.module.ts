@@ -15,9 +15,11 @@ import { AuthGuard } from './auth.guard';
 import {FaqComponent} from './faq/faq.component';
 import {GetInvolvedComponent} from './get-involved/getinvolved.component';
 import {NewsComponent} from './news/news.component';
+import { EventsComponent } from './events/events.component';
 import {ProfileComponent} from './profile/profile.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { from } from 'rxjs';
 
 
 
@@ -29,6 +31,7 @@ export const routes: Routes = [
   {path: 'about',component: LoginComponent},
   {path: 'getinvolved', component: GetInvolvedComponent},
   {path: 'news',component: NewsComponent},
+  {path: 'events', component: EventsComponent},
   {path: 'profile',component: ProfileComponent},
   {path: 'verifyEmailPage', component: VerifyEmailComponent},
   {path: 'signUpForm', component: SignupFormComponent},
