@@ -82,7 +82,7 @@ export class AuthenticationService {
 
     get appUser$() : Observable<AppUser>{
         return this.user$.pipe(
-            switchMap(({uid}) => this.userService.get(uid)));
+            switchMap(user => this.userService.get(user.uid)));
     }
 
 }
