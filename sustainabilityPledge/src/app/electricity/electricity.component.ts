@@ -22,9 +22,7 @@ export class ElectricityComponent implements OnInit {
 
   ngOnInit(): void {
     this.electricityQuestion = this.questionService.getElectricity();
-    //this.questionArray = JSON.parse(this.electricityQuestion);
     this.numberOfQuestions = Object.keys(this.electricityQuestion).length;
-    //this.numberOfQuestions = this.questionArray.length;
 
     this.showMeList = new Array<boolean> (this.numberOfQuestions);
     this.showMeList[0] = true;

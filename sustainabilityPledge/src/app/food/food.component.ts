@@ -10,6 +10,9 @@ import { Pledge} from "../models/Pledge";
 export class FoodComponent implements OnInit {
 
   foodQuestion: any;
+  questionArray: any;
+  numberOfQuestions: number;
+  showMeList: boolean[];
 
   constructor(
     private questionService: QuestionService
@@ -17,6 +20,10 @@ export class FoodComponent implements OnInit {
 
   ngOnInit(): void {
     this.foodQuestion = this.questionService.getFood();
+    this.numberOfQuestions = Object.keys(this.foodQuestion).length;
+
+    this.showMeList = new Array<boolean> (this.numberOfQuestions);
+    this.showMeList[0] = true;
   }
 
   radioChangeHandler(event: any){

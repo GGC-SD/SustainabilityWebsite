@@ -10,6 +10,9 @@ import { Pledge } from "../models/Pledge";
 export class WaterComponent implements OnInit {
 
   waterQuestions: any;
+  questionArray: any;
+  numberOfQuestions: number;
+  showMeList: boolean[];
 
   constructor(
     private questionService: QuestionService
@@ -17,6 +20,10 @@ export class WaterComponent implements OnInit {
 
   ngOnInit(): void {
     this.waterQuestions = this.questionService.getWater();
+    this.numberOfQuestions = Object.keys(this.waterQuestions).length;
+
+    this.showMeList = new Array<boolean> (this.numberOfQuestions);
+    this.showMeList[0] = true;
   }
 
   radioChangeHandler(event: any){

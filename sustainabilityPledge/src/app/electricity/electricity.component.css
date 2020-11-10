@@ -3,7 +3,6 @@ section {
     flex-flow: row wrap;
     width: 90%;
     margin: auto;
-
 }
 section > div {
     flex: 1;
