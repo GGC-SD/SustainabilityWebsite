@@ -17,3 +17,19 @@
 #secondinfo {
     border: 2px outset red;
 }
+.size {
+    width:auto;
+    max-width: 100%;
+    height:auto;
+    max-height: 380px;
+    align-self: center;
+    overflow: hidden;
+  }
+  .imgdiv {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+    align-items: center;
+  }
