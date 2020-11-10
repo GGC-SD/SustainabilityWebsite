@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as firebase from 'firebase';
 import { UserService } from '../user.service';
-import { last } from 'rxjs/operators';
+import { last, switchMap } from 'rxjs/operators';
+import { AppUser } from '../models/app-user';
 
 // import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
@@ -24,23 +25,23 @@ export class AuthenticationService {
     SignUp(email: string, password: string, firstName: String, lastName) {
         var fullName = firstName + ' ' + lastName;
         this.angularFireAuth
-            .createUserWithEmailAndPassword(email, password).then(() => this.angularFireAuth.currentUser.then(u => u.sendEmailVerification()).then(() => this.angularFireAuth.currentUser.then(u => u.updateProfile({displayName: fullName, photoURL: "" }))
+            .createUserWithEmailAndPassword(email, password).then(() => this.angularFireAuth.currentUser.then(u => u.sendEmailVerification()).then(() => this.angularFireAuth.currentUser.then(u => u.updateProfile({ displayName: fullName, photoURL: "" }))
                 .then(() => {
                     console.log('Please verify your email');
                     alert('Please verify your email');
                 }).catch((error) => {
                     console.log('Error: ' + error);
                 }))
-            .then(res => {
+                .then(res => {
 
-                console.log('You are Successfully signed up!', res);
-                
-            })
-            .catch(error => {
-                console.log('Something is wrong:', error.message);
-            }));
-            
-            
+                    console.log('You are Successfully signed up!', res);
+
+                })
+                .catch(error => {
+                    console.log('Something is wrong:', error.message);
+                }));
+
+
     }
 
 
@@ -65,22 +66,26 @@ export class AuthenticationService {
     /* Sign out */
     SignOut() {
         this.angularFireAuth
-        .signOut();
+            .signOut();
     }
 
-    ResendEmailVerfication(){
+    ResendEmailVerfication() {
         this.angularFireAuth
-        .currentUser.then(u => u.sendEmailVerification())
+            .currentUser.then(u => u.sendEmailVerification())
             .then(() => {
                 console.log('Please verify your email');
                 alert('Please verify your email');
             }).catch((error) => {
                 console.log('Error: ' + error);
             });
-        }
-
-    
     }
+
+    get appUser$() : Observable<AppUser>{
+        return this.user$.pipe(
+            switchMap(({uid}) => this.userService.get(uid)));
+    }
+
+}
 
 
 
