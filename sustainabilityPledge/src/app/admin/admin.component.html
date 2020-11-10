@@ -1,3 +1,34 @@
 <app-navbar></app-navbar>
+<div id="center">
 
-<p>admin works!</p>
+    <h2>Users</h2>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="fullName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Full Name </th>
+      <td mat-cell *matCellDef="let appUser"> {{appUser.fullName}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+      <td mat-cell *matCellDef="let appUser"> {{appUser.email}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="isEmailVerified">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email Verified </th>
+      <td mat-cell *matCellDef="let appUser"> {{appUser.isEmailVerified}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="isAdmin">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Admin </th>
+      <td mat-cell *matCellDef="let appUser"> {{appUser.isAdmin}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

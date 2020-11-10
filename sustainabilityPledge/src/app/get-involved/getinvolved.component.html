@@ -1,39 +1,42 @@
-
 <app-navbar></app-navbar>
+
 <body>
-    <h1 style="text-align: center;" id="GetInvolvedHeader2">Get Involved</h1>
-    <p id="pintro">Looking forward to join future events complete the form below:</p>
-    <div style="width:558px; margin:0 auto;">
-        <div id="ProfileBox" style="width: 558px; text-align: center;">
-          <div id="content">
-            <article id="form">
-              <form id="giform" action="/getinvolved" method="POST"> 
-                <h3> Join Events </h3>
-                <p style="text-decoration: underline;"> Enter info to join events: </p>
-                <div style="margin-left: 40px;"> </div>
-                <p> Name: 
-                  <input [(ngModel)]="name" id="name"size="15" maxlength="30" type="text">
-                </p>
-                <div style="margin-left: 40px;"> </div>
-                <p> Email: 
-                  <input  [(ngModel)]="email"  id="email" size="15" maxlength="50" type="email">
-                </p>
-                <p>Phone: 
-                  <input [(ngModel)]="phone" size="15" maxlength="15" type="text"></p>
-                <div style="margin-left: 120px;">
-                  <button (click)="saveInfo()" id="join" class="btn btn-outline-info mr-1"   style="margin-left:5px;">Join</button>
-                </div>
-              </form>
-              <br>
-              <div id="PresenceAside">
-                <p style="font-weight: bold;"><u>Link to GGC Presence Page</u></p>
-                <p> Click <a href="https://ggc.presence.io/">here</a> to go there now.
-                </p>
-              </div>
-              
-            </article>
-            
-          </div>
-        </div>
+  <h1 style="text-align: center;" id="GetInvolvedHeader2">Get Involved</h1>
+  <p id="pintro">Looking forward to join future events complete the form below:</p>
+  <div style="width:558px; margin:0 auto;">
+    <div id="ProfileBox" style="width: 558px; text-align: center;">
+      <div id="content">
+        <article id="form">
+          
+  <div style="width:558px; margin:0 auto;">
+    <form #f="ngForm" (ngSubmit)= "save(f.value)">
+      <div class="form-group">
+        <label for="name">Name: </label>
+        <input ngModel name="name" id= "name" type="text" class="form-control">
       </div>
+      <div class="form-group">
+        <label for="email">Email: </label>
+        <input ngModel name= "email" id= "email" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number: </label>
+        <input ngModel name="phone" id= "phone" type="text" class="form-control">
+      </div>
+      <button class="btn btn-primary">Save</button>
+    </form>
+
+  </div>
+          <br>
+          <div id="PresenceAside">
+            <p style="font-weight: bold;"><u>Link to GGC Presence Page</u></p>
+            <p> Click <a href="https://ggc.presence.io/">here</a> to go there now.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+  </div>
+
 </body>

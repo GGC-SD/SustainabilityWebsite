@@ -3,9 +3,10 @@ export class GetInvolvedUser{
     phone: string;
     emailAddress: string;
 
-    constructor(n:string, p:string, ea: string){
-        this.name= n;
-        this.phone = p;
-        this.emailAddress = ea;
+    constructor(name :string, phone :string, emailAddress: string){
+        this.name= name;
+        this.phone = phone;
+        this.emailAddress = emailAddress;
     }
+    
 }

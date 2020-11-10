@@ -31,7 +31,7 @@ import { AuthGuard } from './auth.guard';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FaqComponent } from './faq/faq.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import {GetInvolvedComponent} from './get-involved/getinvolved.component';
+import { GetInvolvedComponent } from './get-involved/getinvolved.component';
 import { NewsComponent } from './news/news.component';
 import { EventsComponent } from './events/events.component';
 import { UserService } from './user.service';
@@ -40,6 +40,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { AdminComponent } from './admin/admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 
 //
@@ -78,6 +80,8 @@ import { AdminComponent } from './admin/admin.component';
     AngularFireAuthModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [AuthenticationService,
     AuthGuard,

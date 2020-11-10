@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { GetInvolvedServiceService } from '../get-involved-service.service';
+import { GetInvolvedServiceService } from '../get-involved-service.service'
+import { GetInvolvedUser } from '../models/getInvolvedUser';
 
 @Component({
     selector: 'app-getinvolved',
@@ -12,17 +13,9 @@ export class GetInvolvedComponent implements OnInit {
     ) {
     }
 
-    name: string;
-    email: string;
-    phone: string;
 
+    save(value){
 
-    saveInfo(){
-        console.log(this.name + " " + this.email +' ' + this.phone)
-        //this.getInvolvedService.saveInfo(this.name,this.email, this.phone);
-        this.name = '';
-        this.email = '';
-        this.phone = '';
     }
     ngOnInit(): void {}
 }
