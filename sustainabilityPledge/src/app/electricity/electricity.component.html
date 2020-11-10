@@ -1,7 +1,12 @@
 <app-top-bar></app-top-bar>
 <h1 style="text-align: center; color: #00704A;"><b><u>Electricity</u></b></h1>
- <div *ngFor="let question of electricityQuestion | async; let indexOfElement=index;" style="text-align: center;">
-  <h3> {{question.title}} </h3>
+<ng-container *ngFor="let question of electricityQuestion | async; let indexOfElement=index;">
+  
+  <div *ngIf="showMeList[indexOfElement]" style="text-align: center;">
+  
+    <div class="greyBox">
+  
+    <h3> {{question.title}} </h3>
   <p>{{question.question}}</p>
   <section>
     <div>
@@ -17,14 +22,28 @@
       <input type="radio" id="{{question.noOption}}{{indexOfElement}}" value="{{question.noOption}}" name="{{question.question}}" (change)="radioChangeHandler($event)">
       <label for="{{question.noOption}}{{indexOfElement}}">{{question.noOption}}</label>
     </div>
+    <br/>
+    
   </section>
+  <div *ngIf="indexOfElement != showMeList.length">
+    <button (click)="showMeList[indexOfElement] = false; showMeList[indexOfElement + 1] = true;">Next Question</button>
+  </div>
+
+</div><br>
+
 </div>
+  
+
+
+</ng-container>
+
+
 
 <div class="d-flex justify-content-around">
   
  <div class="btn-group btn-group-lg col-md-8" >
-  <button type="button" class="btn btn-secondary" routerLink="/water">Back</button>
-  <button type="button" class="btn btn-secondary" routerLink="/food">Next</button>
+  <button type="button" class="btn btn-secondary" routerLink="/water">Back to Category: Water</button>
+  <button type="button" class="btn btn-secondary" routerLink="/food">Next Category: Food</button>
 </div>
 
 

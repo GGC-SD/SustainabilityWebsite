@@ -1,10 +1,14 @@
 section {
     display: flex;
     flex-flow: row wrap;
+    width: 90%;
+    margin: auto;
+
 }
 section > div {
     flex: 1;
     padding: 0.5rem;
+    width: 250px;
 }
 input[type="radio"] {
     display: none;
@@ -33,3 +37,18 @@ input[type="radio"]:checked + label {
         flex-direction: column;
     }
   }
+
+  .greyBox {
+        margin: auto;
+        width: 40%;
+        background: #F2F2F2;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+        margin-top: 1 rem;
+        box-shadow: 1px 1px 2px #fff inset,
+                -1px -1px 2px #fff inset;
+        padding: 1rem;
+    
+    }
