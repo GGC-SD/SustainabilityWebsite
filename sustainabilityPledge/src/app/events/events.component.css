@@ -1,0 +1,19 @@
+#head {
+    text-align: center;
+}
+
+#firstimage {
+    border: 2px outset green;
+}
+
+#firstinfo {
+    border: 2px outset green;
+}
+
+#secondimage {
+    border: 2px outset green;
+}
+
+#secondinfo {
+    border: 2px outset red;
+}
