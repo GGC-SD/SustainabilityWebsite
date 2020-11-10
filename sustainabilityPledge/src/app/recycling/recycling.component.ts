@@ -10,6 +10,9 @@ import { Pledge } from "../models/Pledge";
 export class RecyclingComponent implements OnInit {
 
   recyclingQuestion: any;
+  questionArray: any;
+  numberOfQuestions: number;
+  showMeList: boolean[];
 
   constructor(
     private questionService: QuestionService
@@ -17,6 +20,10 @@ export class RecyclingComponent implements OnInit {
 
   ngOnInit(): void {
     this.recyclingQuestion = this.questionService.getRecycling();
+    this.numberOfQuestions = Object.keys(this.recyclingQuestion).length;
+
+    this.showMeList = new Array<boolean> (this.numberOfQuestions);
+    this.showMeList[0] = true;
   }
 
   radioChangeHandler(event: any){
