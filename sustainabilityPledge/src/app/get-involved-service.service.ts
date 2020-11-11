@@ -20,12 +20,9 @@ export class GetInvolvedServiceService {
     
    }
 
-  saveInfo(name: string, email: string, phone:string){
-    this.db.list('InterestedInEvents').push({
-      name: name,
-      email: email,
-      phone: phone
-    }).then(function(docRef) {
+  create(GetInvolvedUser){
+    this.db.list('/InterestedInEvents').push(GetInvolvedUser)
+    .then(function(docRef) {
       console.log(docRef);
      })
     .catch(function(error) {

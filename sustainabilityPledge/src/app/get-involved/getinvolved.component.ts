@@ -14,8 +14,9 @@ export class GetInvolvedComponent implements OnInit {
     }
 
 
-    save(value){
-
+    save(GetInvolvedUser){
+        console.log(GetInvolvedUser);
+        this.getInvolvedService.create(GetInvolvedUser);
     }
     ngOnInit(): void {}
 }

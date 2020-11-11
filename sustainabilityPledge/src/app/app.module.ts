@@ -42,6 +42,7 @@ import { AdminAuthGuard } from './admin-auth-guard.service';
 import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { GetInvolvedServiceService } from './get-involved-service.service';
 
 
 //
@@ -86,7 +87,8 @@ import { MatTableModule } from '@angular/material/table';
   providers: [AuthenticationService,
     AuthGuard,
     AdminAuthGuard,
-    UserService],
+    UserService,
+   GetInvolvedServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

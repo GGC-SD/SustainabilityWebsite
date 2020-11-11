@@ -17,7 +17,7 @@ export class AuthenticationService {
     user$: Observable<firebase.User>;
 
     constructor(private angularFireAuth: AngularFireAuth, private router: Router, private route: ActivatedRoute, private userService: UserService) {
-        ; this.user$ = angularFireAuth.authState
+         this.user$ = angularFireAuth.authState;
     }
 
 

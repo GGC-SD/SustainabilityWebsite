@@ -28,8 +28,8 @@
         <li class="nav-item active">
           <a class="nav-link" style="font-size: larger;" routerLink="/events">Events</a>
         </li>
-        <ng-container *ngIf="appUser.isAdmin">
-        <li class="nav-item active">
+        <ng-container *ngIf="auth && auth.user$ | async">
+        <li *ngIf="appUser.isAdmin" class="nav-item active">
           <a class="nav-link" style="font-size: larger;" routerLink="/admin">Admin</a>
         </li>
       </ng-container>

@@ -10,7 +10,7 @@ import { AuthenticationService } from '../shared/authentication.service';
 export class NavbarComponent implements OnInit {
   appUser: AppUser;
 
-  constructor(private auth: AuthenticationService) {
+  constructor(public auth: AuthenticationService) {
     auth.appUser$.subscribe(appUser => this.appUser = appUser);
    }
 
