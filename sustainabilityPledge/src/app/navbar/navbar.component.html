@@ -28,11 +28,11 @@
         <li class="nav-item active">
           <a class="nav-link" style="font-size: larger;" routerLink="/events">Events</a>
         </li>
-        <ng-container *ngIf="auth && auth.user$ | async">
-        <li *ngIf="appUser.isAdmin" class="nav-item active">
+        <!--<ng-container *ngIf="appUser.isAdmin">
+        <li class="nav-item active">
           <a class="nav-link" style="font-size: larger;" routerLink="/admin">Admin</a>
         </li>
-      </ng-container>
+      </ng-container>-->
       </ul><ul class="nav navbar-nav ml-auto navbar-dark">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
