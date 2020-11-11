@@ -3,6 +3,7 @@ section {
     flex-flow: row wrap;
     width: 90%;
     margin: auto;
+    align-content: center;
 }
 section > div {
     flex: 1;
@@ -41,6 +42,7 @@ input[type="radio"]:checked + label {
   .greyBox {
     margin: auto;
     width: 40%;
+    min-width: 360px;
     background: #F2F2F2;
     display: block;
     border: 1px solid #ccc;

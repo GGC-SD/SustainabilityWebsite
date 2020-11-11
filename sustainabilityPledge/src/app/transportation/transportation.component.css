@@ -3,6 +3,7 @@ section {
     flex-flow: row wrap;
     width: 90%;
     margin: auto;
+    align-content: center;
 }
 section > div {
     flex: 1;
@@ -43,6 +44,7 @@ input[type="radio"]:checked + label {
     width: 40%;
     background: #F2F2F2;
     display: block;
+    min-width: 360px;
     border: 1px solid #ccc;
     border-radius: 20px;
     margin-bottom: 1rem;
