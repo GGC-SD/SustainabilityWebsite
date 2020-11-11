@@ -25,8 +25,8 @@
     <br/>
     
   </section>
-  <div class="btn btn-outline-success" *ngIf="indexOfElement != showMeList.length">
-    <button (click)="showMeList[indexOfElement] = false; showMeList[indexOfElement + 1] = true;">Next Question</button>
+  <div *ngIf="indexOfElement != showMeList.length">
+    <button class="btn btn-outline-success" (click)="showMeList[indexOfElement] = false; showMeList[indexOfElement + 1] = true;">Next Question</button>
   </div>
 
 </div><br>
