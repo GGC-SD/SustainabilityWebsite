@@ -1,0 +1,13 @@
+#NewsDescription {
+    max-width: 350px;
+    border: 10pt solid #00704a;
+    background-color:#00704a;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+}
+.newsflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
