@@ -52,7 +52,7 @@ export class QuestionService {
       this.db.list('Pledges').push({
         pledge: this.answers,
         user:  firebase.auth().currentUser.uid,
-        dateTaken : firebase.firestore.FieldValue.serverTimestamp()
+        dateTaken : firebase.database.ServerValue.TIMESTAMP
       })
       .then(function(docRef) {
         console.log(docRef);
