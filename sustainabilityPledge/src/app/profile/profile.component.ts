@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { AppUser } from '../models/app-user';
+import { AuthenticationService } from '../shared/authentication.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  user$: any;
 
-  constructor() { }
+  constructor(public auth:AuthenticationService) { }
 
   ngOnInit(): void {
   }
+
 
 }

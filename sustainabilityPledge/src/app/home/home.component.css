@@ -3,7 +3,11 @@
   height: 50px;
   background-color: #00704A;
 }
-
+.blurb{
+  text-align: center;
+  font-size: xx-large; 
+  max-width: 20%;
+}
 #bigButton{
   height: 100px;
   font-size: 50px;
