@@ -40,8 +40,9 @@ input[type="radio"]:checked + label {
   }
 
   .greyBox {
-    margin: auto;
+    margin: 0 auto;
     width: 40%;
+    align-self: center;
     min-width: 360px;
     background: #F2F2F2;
     display: block;
