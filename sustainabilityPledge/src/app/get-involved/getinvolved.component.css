@@ -18,3 +18,16 @@
     text-align: center;
     margin: auto;
   }
+  #ProfileBox {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    position: relative;
+    margin: auto;
+    background-color: #00704a;
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    border: 10pt solid #00704a;
+    border-radius: 5px;
+    visibility: visible;
+    color: white;
+  }
