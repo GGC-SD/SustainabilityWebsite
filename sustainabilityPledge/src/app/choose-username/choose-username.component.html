@@ -5,9 +5,9 @@
 
   
       <h1 *ngIf="authenticationService && authenticationService.user$ | async"
-        style="color: rgb(226, 6, 6); font-size: 90px;">
+        style="color: rgb(226, 6, 6); font-size: 54px;">
         Log-Out</h1>
-      <h1 *ngIf="authenticationService && authenticationService.user$ | async">Are you sure you want to log out?
+      <h1 *ngIf="authenticationService && authenticationService.user$ | async" style="font-size: larger;">Are you sure you want to log out?
         {{ (authenticationService.user$ | async)?.email }}</h1>
 
       <div *ngIf="!(authenticationService.user$ | async)">
