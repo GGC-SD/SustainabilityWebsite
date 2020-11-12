@@ -1,9 +1,9 @@
 <app-navbar></app-navbar>
-
+<br>
+<div id="ProfileBox">
 <div class="container">
 
-  <div class="row" id="center">
-    <div class="col-md-6 col-md-offset-3">
+  
       <h1 *ngIf="authenticationService && authenticationService.user$ | async"
         style="color: rgb(226, 6, 6); font-size: 90px;">
         Log-Out</h1>
@@ -22,7 +22,7 @@
             placeholder="Must be 8 characters long" required [pattern]="passwordPattern">
 
         </div>
-        <button (click)="signIn()" id="login" class="btn btn-outline-info mr-1" style="margin-left:5px;">Login</button>
+        <button (click)="signIn()" id="login" class="btn btn-outline-info mr-1" >Login</button>
         <button routerLink="/signUpForm" id="signUp" class="btn btn-outline-success">Sign Up</button>
       </div>
       <button (click)="signOut()" class="btn btn-outline-danger mr-1"
@@ -30,5 +30,5 @@
       <button class="btn btn-outline-success" routerLink="/"
         *ngIf="authenticationService.user$ | async">Home</button>
 
-    </div>
-  </div>
+</div>
+</div>
