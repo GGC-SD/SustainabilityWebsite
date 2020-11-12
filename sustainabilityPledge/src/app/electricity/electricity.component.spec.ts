@@ -1,16 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { ElectricityComponent } from './electricity.component';
+
 import { Pledge } from "../models/Pledge";
 import { QuestionService } from '../question.service';
 
 describe('ElectricityComponent', () => {
   let component: ElectricityComponent;
   let fixture: ComponentFixture<ElectricityComponent>;
+
   let mockQuestionService: jasmine.SpyObj<QuestionService>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ElectricityComponent ],
+
       providers: [ {provide: QuestionService, useValue: mockQuestionService} ]
     })
     .compileComponents();
@@ -20,6 +24,7 @@ describe('ElectricityComponent', () => {
     fixture = TestBed.createComponent(ElectricityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
     mockQuestionService = TestBed.get(QuestionService);
     let q1: Pledge = new Pledge('electricity', 'test question1', 'Pledge');
     let q2: Pledge = new Pledge('electricity', 'test question2', 'Pledge');
