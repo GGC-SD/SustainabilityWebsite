@@ -1,44 +1,48 @@
 <app-navbar></app-navbar>
 
 <body>
-  
   <br>
-  <div style="max-width: 540px; margin:0 auto;">
-    <div id="ProfileBox" style="max-width: 540px; text-align: center;">
-      <h1 style="text-align: center;" id="GetInvolvedHeader2">Get Involved</h1>
-      <p id="pintro">Please complete the form below if you are interested in future events.</p>
-      <div id="content">
-        <article id="form">
-          
-  <div style="max-width: 540px; margin:0 auto;">
-    <form #f="ngForm" (ngSubmit)= "save(f.value)">
-      <div class="form-group">
-        <label for="name">Name: </label>
-        <input ngModel name="name" id= "name" type="text" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="email">Email: </label>
-        <input ngModel name= "email" id= "email" type="text" class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number: </label>
-        <input ngModel name="phone" id= "phone" type="text" class="form-control">
-      </div>
-      <button class="btn btn-outline-success">Save</button>
-    </form>
+  <div id="ProfileBox" style="width: 558px; text-align: center;">
 
-  </div>
-          <br>
-          <div id="PresenceAside">
-            <p style="font-weight: bold;"><u>Link to GGC Presence Page</u></p>
-            <p> Click <a href="https://ggc.presence.io/">here</a> to go there now.
-            </p>
-          </div>
+    
+    <div style="max-width: 540px; margin:0 auto;">
+      <div id="ProfileBox" style="max-width: 540px; text-align: center;">
+        <h1 style="text-align: center;" id="GetInvolvedHeader2">Get Involved</h1>
+        <p id="pintro">Please complete the form below if you are interested in future events.</p>
+        <div id="content">
+          <article id="form">
 
-        </article>
+            <div style="max-width: 540px; margin:0 auto;">
+              <form #f="ngForm" (ngSubmit)="save(f.value)">
+                <div class="form-group">
+                  <label style=" font-size: 30px;" for="name">Name: </label>
+                  <input ngModel name="name" id="name" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label style=" font-size: 30px;" for="email">Email: </label>
+                  <input ngModel name="email" id="email" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label style=" font-size: 30px;" for="phone">Phone Number: </label>
+                  <input ngModel name="phone" id="phone" type="text" class="form-control">
+                </div>
+                <button class="btn btn-outline-success">Save</button>
+              </form>
 
+            </div>
+            <br>
+            <div id="PresenceAside">
+              <p style="font-weight: bold;"><u>Link to GGC Presence Page</u></p>
+              <p> Click <a href="https://ggc.presence.io/">here</a> to go there now.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
       </div>
     </div>
   </div>
+
 
 </body>

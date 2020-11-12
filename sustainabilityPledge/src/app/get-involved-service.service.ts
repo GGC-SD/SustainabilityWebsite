@@ -28,6 +28,7 @@ export class GetInvolvedServiceService {
     .catch(function(error) {
       console.error("Error adding document: ", error);
     });
+    alert('Thank You for your interest! You will hear from SIOS for future events.' );
     this.router.navigate(['/home']);
   }
 }
