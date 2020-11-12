@@ -1,10 +1,11 @@
 <app-top-bar></app-top-bar>
 <h1 style="text-align: center; color: #00704A;"><b><u>Recycling</u></b></h1>
+<div class="greyBox">
 <ng-container *ngFor="let question of recyclingQuestion | async; let indexOfElement=index;">
   
   <div *ngIf="showMeList[indexOfElement]" style="text-align: center;">
   
-    <div class="greyBox">
+    
   
     <h3> {{question.title}} </h3>
   <p>{{question.question}}</p>
@@ -29,14 +30,12 @@
     <button class="btn btn-outline-success" (click)="showMeList[indexOfElement] = false; showMeList[indexOfElement + 1] = true;">Next Question</button>
   </div>
 
-</div><br>
-
 </div>
   
 
 
 </ng-container>
-
+</div>
 
 
 <div class="d-flex justify-content-around">
