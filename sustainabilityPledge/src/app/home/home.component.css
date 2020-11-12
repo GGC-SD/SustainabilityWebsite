@@ -54,4 +54,7 @@
     align-self: center;
     overflow: hidden;
   }
+  .blurb{
+    margin-right: 0px;
+  }
 }
