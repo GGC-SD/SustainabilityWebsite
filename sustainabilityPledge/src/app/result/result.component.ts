@@ -43,11 +43,11 @@ export class ResultComponent implements OnInit {
     if(!this.resultCount.has(q)){
       this.resultCount.set(q, new Result());
     }
-    if(a == 'Pledge'){
+    if(a == 'I Will Do This'){
       this.resultCount.get(q).setPledge();
-    }else if(a == 'Do not Pledge'){
+    }else if(a == 'Skip'){
       this.resultCount.get(q).setDontPledge();
-    }else if(a == 'Already Pledged'){
+    }else if(a == 'I Already Do This'){
       this.resultCount.get(q).setAlreadyPledge();
     }
   }
