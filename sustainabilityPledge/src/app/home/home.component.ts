@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   totalPledges: number;
 
   constructor(public db: AngularFireDatabase) {
+    // retrieve Pledges list db data and count number of pledges
     this.db.list('Pledges').valueChanges().subscribe(res => {      
       this.totalPledges = res.length;
     })

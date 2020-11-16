@@ -39,6 +39,7 @@ export class ResultComponent implements OnInit {
     return this.resultCount.get(s).getAlreadyPledged();
   }
 
+  // Strings must match answer options in db for comparison
   counter(q:string, a:string){
     if(!this.resultCount.has(q)){
       this.resultCount.set(q, new Result());
