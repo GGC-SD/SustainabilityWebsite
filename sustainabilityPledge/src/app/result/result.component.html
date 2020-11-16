@@ -8,9 +8,9 @@
     <p style="color: green; font-size: 1.2em;">You answered: {{question.answer}}</p>
     <p style="font-size: 1.2em;">How others answered:</p>
   <div>
-    <span style="color: blue; font-size: 1.2em;">Will Do This: {{getPCount(question.question)}}</span>&nbsp;&nbsp;
-    <span style="color: orange; font-size: 1.2em;">Already Do This: {{getAPCount(question.question)}}</span>&nbsp;&nbsp;
-    <span style="color: red; font-size: 1.2em;">Skipped: {{getDPCount(question.question)}}</span>&nbsp;&nbsp;
+    <span style="color: blue; font-size: 1.2em;">Will Do This: {{getPCount(question.question) / (getPCount(question.question) + getAPCount(question.question) + getDPCount(question.question)) * 100 | number:'1.0-0'}}%</span>&nbsp;&nbsp;
+    <span style="color: orange; font-size: 1.2em;">Already Do This: {{getAPCount(question.question) / (getPCount(question.question) + getAPCount(question.question) + getDPCount(question.question)) * 100 | number:'1.0-0'}}%</span>&nbsp;&nbsp;
+    <span style="color: red; font-size: 1.2em;">Skipped: {{getDPCount(question.question) / (getPCount(question.question) + getAPCount(question.question) + getDPCount(question.question)) * 100 | number:'1.0-0'}}%</span>&nbsp;&nbsp;
     
 
   </div>
