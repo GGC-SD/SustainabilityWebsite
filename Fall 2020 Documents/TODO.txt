@@ -1,0 +1,5 @@
+TODO:
+------
+- Implement Admin View
+- Perfect UI with Pledges and statistics shown 
+- Implement the Profile page where is changeable by the user
