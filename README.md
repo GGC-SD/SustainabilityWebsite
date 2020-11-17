@@ -9,7 +9,8 @@
     better.
 
 ### Demonstration Video
- - [**click here**](https://www.youtube.com/watch?v=VRr0vG4C6y8&feature=youtu.be)
+ - Spring 2020[**click here**](https://www.youtube.com/watch?v=VRr0vG4C6y8&feature=youtu.be)
+ - Fall 2020[**click here**](https://www.youtube.com/watch?v=a9Ixflzd_Ko&feature=emb_logo)
 
 ### Features
 - Login Page
@@ -22,6 +23,7 @@
 
 ### Technologies Used
  - Angular 9
+ - Firebase CLI
  - Bootstrap
  - Selenium
 
