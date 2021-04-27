@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminAuthGuard } from '../admin-auth-guard.service';
+import { AdminAuthGuard } from '../services/admin-auth-guard/admin-auth-guard.service';
 import { AppUser } from '../models/app-user';
 import { AuthenticationService } from '../shared/authentication.service';
 

@@ -1,16 +1,16 @@
 // Import all needed components and services
-import { AuthGuard } from './auth.guard';
-import { ResultComponent } from './result/result.component';
+import { AuthGuard } from './services/auth-guard/auth.guard';
+import { ResultComponent } from './pages/pledge/result/result.component';
 import { AppComponent } from './app.component';
-import { WaterComponent } from './water/water.component';
-import { TransportationComponent } from './transportation/transportation.component';
-import { RecyclingComponent } from './recycling/recycling.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { GetInvolvedComponent } from './get-involved/getinvolved.component';
-import { FoodComponent } from './food/food.component';
-import { FaqComponent } from './faq/faq.component';
-import { ElectricityComponent } from './electricity/electricity.component';
+import { WaterComponent } from './pages/pledge/water/water.component';
+import { TransportationComponent } from './pages/pledge/transportation/transportation.component';
+import { RecyclingComponent } from './pages/pledge/recycling/recycling.component';
+import { LoginComponent } from './pages/about/about.component';
+import { HomeComponent } from './pages/home/home.component';
+import { GetInvolvedComponent } from './pages/get-involved/getinvolved.component';
+import { FoodComponent } from './pages/pledge/food/food.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { ElectricityComponent } from './pages/pledge/electricity/electricity.component';
 import { AuthenticationService } from './shared/authentication.service';
 
 // Import libraries needed for testing

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './shared/authentication.service';
-import { UserService } from './user.service';
+import { UserService } from './services/user/user.service';
 
 
 @Component({
@@ -19,5 +19,4 @@ export class AppComponent {
       }
     })
   }
-  // myImg: string ='assets/images/pic1.jpg';
 }
