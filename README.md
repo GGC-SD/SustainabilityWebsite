@@ -4,8 +4,7 @@
 ## Team Avengers
 
 ### Description / Abstract
-  - This project is on a website that was made for the Sustainability Committee in order to spread a pledge that
-    will help with the environment. with a small contribution on the pledge can help and change the world for the
+  - This project is on a website that was made for the Sustainability Committee in order to allow users to take a pledge in personal consumption of electricity, water,      recylcing and transportation. With a small contribution on the pledge can help and change the world for the
     better.
 
 ### Demonstration Video
