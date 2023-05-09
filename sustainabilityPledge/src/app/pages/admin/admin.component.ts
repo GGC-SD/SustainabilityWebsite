@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { AppUser } from '../../models/app-user';
 import { UserService } from '../../services/user/user.service';
 import { take } from 'rxjs/operators';
+import { GetInvolvedServiceService } from 'src/app/services/get-involved/get-involved-service.service';
 
 @Component({
   selector: 'app-admin',
@@ -16,14 +17,16 @@ import { take } from 'rxjs/operators';
 export class AdminComponent implements AfterViewInit {
   
   listUsers: any=[];
-  finalObjects = [];
+  listInterested: any=[];
+
   displayedColumns: String[] = ['fullName', 'email', 'isEmailVerified', 'isAdmin'];
+  contactsColumns: String[] = ['email', 'name', 'phone'];
   
-  
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private getInvolvedService: GetInvolvedServiceService) { }
 
   @ViewChild(MatSort) sort : MatSort;
   dataSource: any;
+  contactsData: any;
   fetchUsers(){
     this.userService.getAllUsers().pipe(take(1)).subscribe(data => {
       for (const key in data){
@@ -37,27 +40,32 @@ export class AdminComponent implements AfterViewInit {
            }
            this.listUsers.push(dataObj);
       }
-      
-        // this.listUsers = Object.keys(data).map(key => {
-        //   const position = data[key];
-        //   const dataObj = {
-        //     id: key,
-        //     fullName: data.fullName,
-        //     email: data.email,
-        //     isEmailVerified: data.isEmailVerified,
-        //     isAdmin: data.isAdmin
-        //   }
-        //   return dataObj;
-        // })
-      //console.log('List of users', this.listUsers);
-      
+      console.log(this.listUsers)
       this.dataSource = new MatTableDataSource(this.listUsers);
     })
   }
 
+  fetchInterestedInEvents(){
+    this.getInvolvedService.getInterestedContact().pipe(take(1)).subscribe(data => {
+      for (const key in data){
+        const remaining = { ...data[key]};
+        const dataObj = {
+             id: key,
+             email: remaining.email,
+             name: remaining.name,
+             phone: remaining.phone
+           }
+           this.listInterested.push(dataObj);
+      }
+      console.log(this.listInterested)
+      this.contactsData = new MatTableDataSource(this.listInterested);
+    })
+
+  }
+
   ngAfterViewInit() {
     this.fetchUsers();
-
+    this.fetchInterestedInEvents();
     
   }
 

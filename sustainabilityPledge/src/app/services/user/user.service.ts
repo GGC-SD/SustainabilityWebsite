@@ -16,7 +16,7 @@ export class UserService {
       fullName: user.displayName,
       email:user.email,
       isEmailVerified: user.emailVerified,
-      isAdmin: false
+      isAdmin: true
     });
   }
 

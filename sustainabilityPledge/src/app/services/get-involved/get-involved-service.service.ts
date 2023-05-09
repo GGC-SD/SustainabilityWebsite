@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Pledge } from '../../models/Pledge';
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
+import { GetInvolvedUser } from 'src/app/models/getInvolvedUser';
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +20,7 @@ export class GetInvolvedServiceService {
   constructor(private router: Router,private db: AngularFireDatabase) {
     
    }
-
+  
   create(GetInvolvedUser){
     this.db.list('/InterestedInEvents').push(GetInvolvedUser)
     .then(function(docRef) {
@@ -31,4 +32,9 @@ export class GetInvolvedServiceService {
     alert('Thank You for your interest! You will hear from SIOS for future events.' );
     this.router.navigate(['/home']);
   }
+
+  getInterestedContact(): Observable<GetInvolvedUser> {
+    return this.db.object<GetInvolvedUser>('/InterestedInEvents/').valueChanges();
+  }
+
 }
