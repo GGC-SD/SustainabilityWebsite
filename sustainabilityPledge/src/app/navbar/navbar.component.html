@@ -43,6 +43,7 @@
             <a class="dropdown-item" routerLink ="/login">Login/Logout</a>
             <a class="dropdown-item" routerLink="/about">About</a>
             <a class="dropdown-item" routerLink="/faq">FAQ</a>
+            <a class="dropdown-item" routerLink="/admin" *ngIf="appUser.isAdmin">Admin</a> 
           </div>
         </li>
       </ul>

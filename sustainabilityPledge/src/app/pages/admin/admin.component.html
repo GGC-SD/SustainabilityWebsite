@@ -3,7 +3,6 @@
 
     <h2>Users</h2>
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-
     <!-- Position Column -->
     <ng-container matColumnDef="fullName">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Full Name </th>
@@ -31,4 +30,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
 </div>

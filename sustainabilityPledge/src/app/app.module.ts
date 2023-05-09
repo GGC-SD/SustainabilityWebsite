@@ -86,7 +86,7 @@ import { GetInvolvedServiceService } from './services/get-involved/get-involved-
   ],
   providers: [AuthenticationService,
     AuthGuard,
-    AdminAuthGuard,
+    // AdminAuthGuard,
     UserService,
    GetInvolvedServiceService],
   bootstrap: [AppComponent]
